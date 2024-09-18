@@ -1,10 +1,34 @@
 import {StrictMode} from "react";
 import {createRoot} from "react-dom/client";
+import "./style/index.css";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import App from "./components/App/App.jsx";
-import "./style/normalize.css";
+import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route
+      path="/"
+      element={<App></App>}
+      errorElement={<ErrorPage></ErrorPage>}>
+      <Route path="/" element={<></>}></Route>
+      <Route path="/exams" element={<div>Экзамены</div>}></Route>
+      <Route path="/english-for-children" element={<></>}></Route>
+      <Route path="/russian-for-children" element={<></>}></Route>
+      <Route path="/music" element={<></>}></Route>
+      <Route path="/english-for-adults" element={<></>}></Route>
+      <Route path="/russian-for-adults" element={<></>}></Route>
+    </Route>
+  )
+);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>
 );
