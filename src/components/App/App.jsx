@@ -1,12 +1,15 @@
 // import {useState} from "react";
 import "./App.scss";
-import SliderLanding from "../SliderLanding/SliderLanding";
+import {Outlet} from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div>App</div>
-      <SliderLanding></SliderLanding>
+      <p>Header Component</p>
+      <main>
+        <Outlet></Outlet>
+      </main>
+      <p>Footer component</p>
     </>
   );
 }
