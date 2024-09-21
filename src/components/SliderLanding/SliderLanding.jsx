@@ -43,6 +43,9 @@ export default function SliderLanding() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 5000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -80,12 +83,7 @@ export default function SliderLanding() {
               Наши курсы направлены на личностный рост, развитие креативности и
               освоение новых навыков в комфортной и дружелюбной атмосфере.
             </p>
-            <p className="slider-landing_text">
-              Мы верим, что учиться и развиваться никогда не поздно, и с нами вы
-              сможете сделать это увлекательно и эффективно. Присоединяйтесь к
-              нашей дружной студии, где каждый найдет занятие по душе и сможет
-              стать лучше версией самого себя!
-            </p>
+
             <div className="slider-landing_btn-group">
               <button className="slider-landing_btn">Узнать больше</button>
               <img
@@ -100,9 +98,10 @@ export default function SliderLanding() {
           <div className="slider-landing_slide">
             <h1 className="slider-landing_title">Привет!</h1>
             <p className="slider-landing_text">
-              Это третий слайд! Мы одинаково круто обучаем английскому,
-              русскому, саунд дизайну,  аранжировке и работе в цифровых
-              аудиостанциях!
+              Мы верим, что учиться и развиваться никогда не поздно, и с нами вы
+              сможете сделать это увлекательно и эффективно. Присоединяйтесь к
+              нашей дружной студии, где каждый найдет занятие по душе и сможет
+              стать лучше версией самого себя!
             </p>
             <p className="slider-landing_text">
               Выбирай курс, отправляй заявку и приступай к обучению!
@@ -121,5 +120,3 @@ export default function SliderLanding() {
     </div>
   );
 }
-
-/*добавить стрелочки, добавить золотой текст, добавить паддинги, добавить стили кнопке, адаптив */

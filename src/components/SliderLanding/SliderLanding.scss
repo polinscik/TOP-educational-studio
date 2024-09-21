@@ -14,7 +14,7 @@
   justify-content: center;
   max-width: 55vw;
   padding-left: 5vw;
-  height: 80vh;
+  height: 85vh;
 }
 .slider-landing_title {
   font-weight: 700;
@@ -49,8 +49,8 @@
   font-size: 1.5rem;
   line-height: 1.5rem;
   border: 2px solid #0f1012;
-  border-radius: 5%;
-  padding: 1.5vh 2rem 1.5vh 1.5vw;
+  border-radius: 5px;
+  padding: 1.5vh 2.3rem 1.5vh 1vw;
   &:hover {
     background-color: #000000;
   }
@@ -59,7 +59,7 @@
   max-width: 100%;
   position: absolute;
   top: 30%;
-  right: 2%;
+  right: 3%;
 }
 
 .slick-arrow.slick-next,
