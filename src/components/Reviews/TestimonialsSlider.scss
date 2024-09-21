@@ -1,0 +1,97 @@
+body {
+    background: url("background-image.jpg");
+    /* Укажите путь к изображению фона */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonials-slider {
+    background-image: url("image0_312_98.png");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        background: url("image0_312_98.png");
+        background-size: cover;
+        color: transparent;
+    }
+
+    .testimonials-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        background-color: #F6F1DE;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 560px;
+
+        .review {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .name-profession {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .name {
+                font-weight: bold;
+            }
+
+            .profession {
+                color: #666;
+                font-size: 0.9em;
+            }
+        }
+
+        .subject {
+            background-color: black;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+    }
+
+    .slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+
+        .control-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+    }
+
+    .leave-review-button {
+        display: block;
+        width: 360px;
+        height: 57px;
+        padding: 10px;
+        background-color: #282828;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #2d3237;
+        }
+    }
+}
