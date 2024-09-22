@@ -1,6 +1,7 @@
 @mixin goldText($path-to-img) {
   background-size: cover;
   -webkit-background-clip: text;
+  -ms-background-clip: text;
   background-clip: text;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
