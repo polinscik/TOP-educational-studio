@@ -1,3 +1,12 @@
+@import "../../style/mixins.scss";
+
+@font-face {
+    font-family: 'Rounds Black';
+    src: url('../../../Fonts/RoundsBlack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-size: 20px;
     background-color: black;
@@ -8,10 +17,25 @@ body {
     text-align: center;
     margin: 20px;
 
+    gap: 0px;
+    opacity: 0px;
 
-    h2 {
+    .teachers-heading {
         margin-bottom: 20px;
-        color: gold;
+        @include goldText("../../images/gold.png");
+        text-align: center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -moz-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        background-position: center center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: "Rounds Black";
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 38.4px;
     }
 
 }
@@ -33,7 +57,7 @@ body {
 
 .teacher-name {
     font-size: 1.5rem;
-    margin: 10px;
+    margin: 15px;
 }
 
 .teacher-image {

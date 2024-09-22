@@ -1,5 +1,5 @@
 import React from 'react';
-import './teachersCards.scss';
+import './TeachersCards.scss';
 import ZakharImage from "../../images/Zakhar.png";
 import DianaImage from "../../images/Diana.png";
 import ArthurImage from "../../images/Arthur.png";
@@ -41,7 +41,7 @@ const teachersData = [
 const TeachersCards = () => {
     return (
         <div className="teachers-container">
-            <h2>Наши преподаватели</h2>
+            <h2 className='teachers-heading'>Наши преподаватели</h2>
             <div className="cards-container">
                 {teachersData.map((teacher) => (
                     <div className="card" key={teacher.name}>
