@@ -15,10 +15,13 @@ body {
 
 .teachers-container {
     text-align: center;
-    margin: 20px;
-
     gap: 0px;
     opacity: 0px;
+    background-image: url("../../images/Vector1.png");
+    margin: 20px auto;
+    width: 1458px;
+    height: 767px;
+
 
     .teachers-heading {
         margin-bottom: 20px;
@@ -44,7 +47,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 35px;
-    background-image: url("../../images/Vector1.png");
 
 }
 

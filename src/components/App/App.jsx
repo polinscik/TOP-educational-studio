@@ -1,7 +1,7 @@
 // import {useState} from "react";
 import "./App.scss";
 import { Outlet } from "react-router-dom";
-import TestimonialsSlider from "../Reviews/TestimonialsSlider";
+import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <p>Header Component</p>
       <TeachersCards />
-      <TestimonialsSlider />
+      <ReviewSlider />
       <main>
         <Outlet></Outlet>
       </main>
