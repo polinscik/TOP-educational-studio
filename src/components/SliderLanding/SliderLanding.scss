@@ -1,0 +1,85 @@
+@import "../../style/mixins.scss";
+.slider-landing {
+  background-image: url("../../images/landing-slider-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #0f1012d9;
+}
+.slider-landing_arrow-style {
+  margin: 0 5%;
+}
+.slider-landing_slide {
+  display: flex;
+  row-gap: 2.5vh;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50vw;
+  padding-left: 5vw;
+  height: 85vh;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding: 2vw;
+  }
+}
+.slider-landing_title {
+  @include goldText("../../images/gold.png");
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  text-align: left;
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-position: center center;
+  background-image: url("../../images/gold.png");
+}
+
+.slider-landing_text {
+  color: #f6f1de;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.slider-landing_btn-group {
+  position: relative;
+  margin-top: 3vh;
+  width: fit-content;
+}
+.slider-landing_btn {
+  background-color: #0f1012;
+  font-family: "Comfortaa", sans-serif;
+  color: #f6f1de;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  border: 2px solid #0f1012;
+  border-radius: 5px;
+  padding: 1.5vh 2.3rem 1.5vh 1vw;
+  &:hover {
+    background-color: #000000;
+  }
+}
+.slider-landing_arrow {
+  max-width: 100%;
+  position: absolute;
+  top: 30%;
+  right: 3%;
+}
+
+.slick-arrow.slick-next,
+.slick-arrow.slick-prev {
+  background-color: #0f1012;
+  padding: 1vh 1vw;
+  border-radius: 5px;
+}
+.slick-arrow.slick-next:hover,
+.slick-arrow.slick-prev:hover {
+  background-color: #000000;
+  opacity: 1;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}

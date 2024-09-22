@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import App from "./components/App/App.jsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
+import MainPage from "./components/MainPage/MainPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +17,7 @@ const router = createBrowserRouter(
       path="/"
       element={<App></App>}
       errorElement={<ErrorPage></ErrorPage>}>
-      <Route path="/" element={<></>}></Route>
+      <Route path="/" element={<MainPage></MainPage>}></Route>
       <Route path="/exams" element={<div>Экзамены</div>}></Route>
       <Route path="/english-for-children" element={<></>}></Route>
       <Route path="/russian-for-children" element={<></>}></Route>
