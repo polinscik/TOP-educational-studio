@@ -1,3 +1,4 @@
+@import "../../style/mixins.scss";
 .slider-landing {
   background-image: url("../../images/landing-slider-background.png");
   background-size: cover;
@@ -17,6 +18,7 @@
   height: 85vh;
 }
 .slider-landing_title {
+  @include goldText("../../images/gold.png");
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.3rem;
