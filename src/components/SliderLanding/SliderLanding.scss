@@ -13,9 +13,13 @@
   row-gap: 2.5vh;
   flex-direction: column;
   justify-content: center;
-  max-width: 55vw;
+  max-width: 50vw;
   padding-left: 5vw;
   height: 85vh;
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding: 2vw;
+  }
 }
 .slider-landing_title {
   @include goldText("../../images/gold.png");
