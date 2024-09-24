@@ -1,11 +1,14 @@
 // import {useState} from "react";
 import "./App.scss";
-import {Outlet} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Header from "../Header/header.jsx";
 
 function App() {
   return (
     <>
-      <p>Header Component</p>
+      <header>
+        <Header></Header>
+      </header>
       <main>
         <Outlet></Outlet>
       </main>
