@@ -1,115 +1,142 @@
 @import "../../style/mixins.scss";
 
-.review-slider {
-    margin: 20px auto;
-    width: 1458px;
-    height: 767px;
-    background-image: url("../../images/Vector1.png");
+.testimonials-slider {
+    text-align: center;
+    width: 1400px;
+    height: 826px;
+    background-color: #0F1012;
+    background-image: url("../../images/Vector2.png");
 
-    .review-heading {
-        margin-bottom: 20px;
+    .testimonials-heading {
+        padding: 50px;
         @include goldText("../../images/gold.png");
-        text-align: center;
         font-weight: bold;
         text-transform: uppercase;
         font-family: "Rounds Black";
         font-size: 32px;
-        font-weight: 400;
-        line-height: 38.4px;
     }
 
-    .review-card {
-        background-color: #F6F1DE;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 15px;
-        width: 560px; // Ширина карточки фиксирована
-        height: auto; // высота адаптивная
+    .slider-container {
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-        .review-text {
-            font-size: 16px;
-            margin-bottom: 20px;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            -webkit-box-orient: vertical;
-        }
-
-        .review-footer {
+        .arrow {
+            background: #282828;
+            width: 45px;
+            height: 45px;
+            gap: 0px;
+            margin: 10px;
+            border-radius: 5px; 
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            border: none;
+            cursor: pointer;
+    }
 
-            .review-author {
-                h4 {
-                    margin: 0;
-                    font-size: 28px;
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
 
+            .testimonial-card {
+                width: 560px;
+                background-color: #F6F1DE;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                display: flex;
+                flex-direction: column; 
+                justify-content: space-between; 
+                height: 100%; 
+                text-align: left;
+
+                &.upper {
+                    height: 205px;
                 }
 
-                p {
-                    margin: 0;
-                    font-size: 20px;
-                    color: gray;
+                &.lower {
+                    height: 277px;
                 }
-            }
 
-            .product-name {
-                @include goldText("../../images/gold.png");
-                background-color: #282828;
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 20px;
+                &.expanded {
+                    height: auto; 
+
+                    .quote {
+                        white-space: pre-wrap;
+                        overflow-wrap: break-word;
+                        
+                    }
+                }
+
+                .quote {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    
+                }
+
+                .read-more {
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    text-align: right;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
+                .testimonial-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .author-info {
+                        text-align: left;
+
+                        p {
+                            margin: 0;
+
+                            &:first-of-type {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .product-name {
+                        height: 42px;
+                        min-width: 232px;
+                        background-color: #0F1012;
+                        color: white;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        font-size: 20px; 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center; 
+                        text-align: center; 
+                        @include goldText("../../images/gold.png");
+                    }
+                    
+                }
             }
         }
     }
 
-    .leave-review-button {
-        @include goldText("../../images/gold.png");
-        background-color: #282828;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
+    .leave-feedback {
         width: 360px;
         height: 57px;
-        margin: 0 auto;
+        border-radius: 5px 0px 0px 0px;
+        background-color: #282828;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
         font-size: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include goldText("../../images/gold.png");
 
         &:hover {
-            background-color: darkgray;
+            opacity: 0.7;
         }
-    }
-
-    .slick-arrow {
-        font-size: 24px;
-        color: black;
-
-        &.next {
-            right: 10px;
-            z-index: 1;
-        }
-
-        &.prev {
-            left: 10px;
-            z-index: 1;
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: darkgray;
-        }
-    }
-
-    .slick-slide {
-        padding: 0 10px; // Добавляем пространство между карточками
     }
 }
+

@@ -7,24 +7,22 @@
     font-style: normal;
 }
 
-body {
+.teachers-container {
+    text-align: center;
+    background-color: black;
+    background-image: url("../../images/Vector1.png");
+    padding: 20px auto;
+    width: 1399px;
+    height: 911px;
     font-size: 20px;
     background-color: black;
 
-}
 
-.teachers-container {
-    text-align: center;
-    gap: 0px;
-    opacity: 0px;
-    background-image: url("../../images/Vector1.png");
-    margin: 20px auto;
-    width: 1458px;
-    height: 767px;
 
 
     .teachers-heading {
         margin-bottom: 20px;
+        padding: 50px;
         @include goldText("../../images/gold.png");
         text-align: center;
         background-size: cover;
@@ -47,6 +45,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 35px;
+    
 
 }
 
