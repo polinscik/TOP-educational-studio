@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <p>Header Component</p>
-      <TeachersCards />
-      <TestimonialsSlider />
       <main>
         <Outlet></Outlet>
+        <TeachersCards />
+        <TestimonialsSlider />
       </main>
       <p>Footer component</p>
     </>
