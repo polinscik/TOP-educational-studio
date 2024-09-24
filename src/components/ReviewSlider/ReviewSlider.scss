@@ -31,87 +31,165 @@
     height: auto; // высота адаптивная
     display: flex;
     flex-direction: column;
-
-    .review-text {
-      font-size: 16px;
-      margin-bottom: 20px;
-
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      -webkit-box-orient: vertical;
-    }
-
-    .review-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .review-author {
-        h4 {
-          margin: 0;
-          font-size: 28px;
-        }
-
-        p {
-          margin: 0;
-          font-size: 20px;
-          color: gray;
-        }
-      }
-
-      .product-name {
-        @include goldText("../../images/gold.png");
-        background-color: #282828;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 20px;
-      }
-    }
   }
 
-  .leave-review-button {
-    @include goldText("../../images/gold.png");
-    background-color: #282828;
-    border: none;
-    padding: 10px 20px;
+  .review-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    -webkit-box-orient: vertical;
+  }
+
+  .review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .review-author {
+    h4 {
+      margin: 0;
+      font-size: 28px;
+    }
+  }
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow {
+    background: #282828;
+    width: 45px;
+    height: 45px;
+    gap: 0px;
+    margin: 10px;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 360px;
-    height: 57px;
-    margin: 0 auto;
-    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:hover {
-      background-color: darkgray;
-    }
+    border: none;
+    cursor: pointer;
   }
 
-  .slick-arrow {
-    font-size: 24px;
-    color: black;
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 
-    &.next {
-      right: 10px;
-      z-index: 1;
+    .testimonial-card {
+      width: 560px;
+      background-color: #f6f1de;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      text-align: left;
+
+      &.upper {
+        height: 205px;
+      }
+
+      &.lower {
+        height: 277px;
+      }
+
+      &.expanded {
+        height: auto;
+
+        .quote {
+          white-space: pre-wrap;
+          overflow-wrap: break-word;
+        }
+      }
+
+      .quote {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .read-more {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        text-align: right;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+
+      .testimonial-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        .author-info {
+          text-align: left;
+
+          p {
+            margin: 0;
+            font-size: 20px;
+            color: gray;
+          }
+        }
+
+        .product-name {
+          @include goldText("../../images/gold.png");
+          background-color: #282828;
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 20px;
+        }
+      }
     }
 
-    &.prev {
-      left: 10px;
-      z-index: 1;
-    }
-
-    &:hover {
+    .leave-review-button {
+      @include goldText("../../images/gold.png");
+      background-color: #282828;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
       cursor: pointer;
-      color: darkgray;
-    }
-  }
+      margin-top: 20px;
+      width: 360px;
+      height: 57px;
+      margin: 0 auto;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  .slick-slide {
-    padding: 0 10px; // Добавляем пространство между карточками
+      &:hover {
+        background-color: darkgray;
+      }
+    }
+
+    .slick-arrow {
+      font-size: 24px;
+      color: black;
+
+      &.next {
+        right: 10px;
+        z-index: 1;
+      }
+
+      &.prev {
+        left: 10px;
+        z-index: 1;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: darkgray;
+      }
+    }
+
+    .slick-slide {
+      padding: 0 10px; // Добавляем пространство между карточками
+    }
   }
 }

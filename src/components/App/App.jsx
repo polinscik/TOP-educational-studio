@@ -8,6 +8,8 @@ function App() {
       <p>Header Component</p>
       <main>
         <Outlet></Outlet>
+        <TeachersCards />
+        <TestimonialsSlider />
       </main>
       <p>Footer component</p>
     </>
