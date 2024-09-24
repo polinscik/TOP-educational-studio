@@ -1,15 +1,11 @@
 // import {useState} from "react";
 import "./App.scss";
-import { Outlet } from "react-router-dom";
-import ReviewSlider from "../ReviewSlider/ReviewSlider";
-import TeachersCards from "../TeachersCards/TeachersCards";
+import {Outlet} from "react-router-dom";
 
 function App() {
   return (
     <>
       <p>Header Component</p>
-      <TeachersCards />
-      <ReviewSlider />
       <main>
         <Outlet></Outlet>
       </main>

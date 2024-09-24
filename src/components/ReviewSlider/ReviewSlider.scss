@@ -1,115 +1,117 @@
 @import "../../style/mixins.scss";
 
 .review-slider {
-    margin: 20px auto;
-    width: 1458px;
-    height: 767px;
-    background-image: url("../../images/Vector1.png");
+  margin: 20px auto;
+  width: 1458px;
+  height: 767px;
+  background-image: url("../../images/gold-bg-vector.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 
-    .review-heading {
-        margin-bottom: 20px;
-        @include goldText("../../images/gold.png");
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: "Rounds Black";
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 38.4px;
+  .review-heading {
+    margin-bottom: 20px;
+    @include goldText("../../images/gold.png");
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Rounds Black";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 38.4px;
+  }
+
+  .review-card {
+    background-color: #f6f1de;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    width: 560px; // Ширина карточки фиксирована
+    height: auto; // высота адаптивная
+    display: flex;
+    flex-direction: column;
+
+    .review-text {
+      font-size: 16px;
+      margin-bottom: 20px;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      -webkit-box-orient: vertical;
     }
 
-    .review-card {
-        background-color: #F6F1DE;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 15px;
-        width: 560px; // Ширина карточки фиксирована
-        height: auto; // высота адаптивная
-        display: flex;
-        flex-direction: column;
+    .review-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-        .review-text {
-            font-size: 16px;
-            margin-bottom: 20px;
-
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            -webkit-box-orient: vertical;
+      .review-author {
+        h4 {
+          margin: 0;
+          font-size: 28px;
         }
 
-        .review-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .review-author {
-                h4 {
-                    margin: 0;
-                    font-size: 28px;
-
-                }
-
-                p {
-                    margin: 0;
-                    font-size: 20px;
-                    color: gray;
-                }
-            }
-
-            .product-name {
-                @include goldText("../../images/gold.png");
-                background-color: #282828;
-                padding: 5px 10px;
-                border-radius: 5px;
-                font-size: 20px;
-            }
+        p {
+          margin: 0;
+          font-size: 20px;
+          color: gray;
         }
-    }
+      }
 
-    .leave-review-button {
+      .product-name {
         @include goldText("../../images/gold.png");
         background-color: #282828;
-        border: none;
-        padding: 10px 20px;
+        padding: 5px 10px;
         border-radius: 5px;
-        cursor: pointer;
-        margin-top: 20px;
-        width: 360px;
-        height: 57px;
-        margin: 0 auto;
-        font-size: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 20px;
+      }
+    }
+  }
 
-        &:hover {
-            background-color: darkgray;
-        }
+  .leave-review-button {
+    @include goldText("../../images/gold.png");
+    background-color: #282828;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 360px;
+    height: 57px;
+    margin: 0 auto;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: darkgray;
+    }
+  }
+
+  .slick-arrow {
+    font-size: 24px;
+    color: black;
+
+    &.next {
+      right: 10px;
+      z-index: 1;
     }
 
-    .slick-arrow {
-        font-size: 24px;
-        color: black;
-
-        &.next {
-            right: 10px;
-            z-index: 1;
-        }
-
-        &.prev {
-            left: 10px;
-            z-index: 1;
-        }
-
-        &:hover {
-            cursor: pointer;
-            color: darkgray;
-        }
+    &.prev {
+      left: 10px;
+      z-index: 1;
     }
 
-    .slick-slide {
-        padding: 0 10px; // Добавляем пространство между карточками
+    &:hover {
+      cursor: pointer;
+      color: darkgray;
     }
+  }
+
+  .slick-slide {
+    padding: 0 10px; // Добавляем пространство между карточками
+  }
 }
