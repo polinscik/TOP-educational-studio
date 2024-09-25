@@ -1,0 +1,14 @@
+@import "../../style/mixins.scss";
+
+.courseCards {
+  background-color: #0f1012;
+  display: flex;
+  flex-direction: column;
+  padding: 6vh 4vw;
+  align-items: center;
+  color: #f6f1de;
+}
+.courseCards__title {
+  @include goldText("../../images/gold.png");
+  font-family: "Rounds Black";
+}
