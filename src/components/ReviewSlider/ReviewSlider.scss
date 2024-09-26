@@ -2,27 +2,33 @@
 
 .testimonials-slider {
   text-align: center;
-  width: 1400px;
-  height: 826px;
   background-color: #0f1012;
   background-image: url("../../images/Vector2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  margin: 10vh 0;
+  max-width: 100%;
+  height: fit-content;
 
   .testimonials-heading {
-    padding: 50px;
+    margin-bottom: 4vh;
     @include goldText("../../images/gold.png");
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Rounds Black";
-    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    padding: 3vh;
   }
 
   .slider-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%; 
 
     .arrow {
       background: #282828;
@@ -42,7 +48,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 40px;
-
+      @media (max-width: 570px) {
+        grid-template-columns: 1fr;
+      }
       .testimonial-card {
         width: 560px;
         background-color: #f6f1de;
@@ -54,6 +62,13 @@
         justify-content: space-between;
         height: 100%;
         text-align: left;
+        @media (max-width: 1024px) {
+          max-width: 60%;
+        }
+        @media (max-width: 570px) {
+          width: auto;
+          max-width: unset;
+        }
 
         &.upper {
           height: 205px;
@@ -92,6 +107,7 @@
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
+          margin-bottom: 5px;
           .author-info {
             text-align: left;
 
@@ -121,21 +137,36 @@
       }
     }
   }
-
-  .leave-feedback {
+  .leave-feedback-button {
     width: 360px;
     height: 57px;
-    border-radius: 5px 0px 0px 0px;
-    background-color: #282828;
-    color: white;
-    border: none;
+    border-radius: 5px; 
+    background-color:  #282828; 
     cursor: pointer;
-    margin-top: 20px;
+    margin: 30px auto 0 auto;
+    margin-bottom: 15px;
+    &:hover {
+      opacity: 0.8; 
+  }
+ 
+  }
+  .leave-feedback {
+    border: none;
+    margin-top: 17px;
     font-size: 24px;
     @include goldText("../../images/gold.png");
-
-    &:hover {
-      opacity: 0.7;
-    }
+    
+    
+  }
+  .product-container {
+    height: 42px;
+    min-width: 232px;
+    background-color: #0f1012;
+    margin-left: 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }

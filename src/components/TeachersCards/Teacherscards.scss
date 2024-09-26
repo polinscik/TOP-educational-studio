@@ -17,6 +17,7 @@
   max-width: 100%;
   height: fit-content;
 
+
   .teachers-heading {
     margin-bottom: 4vh;
     @include goldText("../../images/gold.png");
@@ -82,4 +83,5 @@
   list-style-position: outside;
   text-align: left;
   padding-left: 2vw;
+  font-size: 20px;
 }
