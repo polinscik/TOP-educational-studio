@@ -4,6 +4,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #0f1012d9;
+  @media (max-width: 1024px) {
+    background-position: center center;
+  }
 }
 .slider-landing_arrow-style {
   margin: 0 5%;
@@ -15,10 +18,11 @@
   justify-content: center;
   max-width: 50vw;
   padding-left: 5vw;
-  height: 85vh;
+  min-height: 85vh;
   @media (max-width: 1024px) {
     max-width: 100%;
     padding: 2vw;
+    min-height: 85vh;
   }
 }
 .slider-landing_title {
@@ -41,6 +45,9 @@
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  & li {
+    list-style-type: none;
+  }
 }
 .slider-landing_btn-group {
   position: relative;
@@ -73,6 +80,17 @@
   background-color: #0f1012;
   padding: 1vh 1vw;
   border-radius: 5px;
+}
+
+.slick-arrow.slick-next {
+  @media (max-width: 1024px) {
+    right: -18px;
+  }
+}
+.slick-arrow.slick-prev {
+  @media (max-width: 1024px) {
+    left: -18px;
+  }
 }
 .slick-arrow.slick-next:hover,
 .slick-arrow.slick-prev:hover {
