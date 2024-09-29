@@ -1,15 +1,27 @@
 @import "../../style/mixins.scss";
 .slider-landing {
-  background-image: url("../../images/landing-slider-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url("../../images/landing-slider-bg-1.png");
+
   background-color: #0f1012d9;
-  @media (max-width: 1024px) {
-    background-position: center center;
-  }
 }
 .slider-landing_arrow-style {
   margin: 0 5%;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.slider-landing__bg-container {
+  // position: relative;
+  // top: -13px;
+}
+.slider-landing__bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  // position: absolute;
+  // width: 100%;
+  @media (max-width: 1024px) {
+    background-position: center center;
+  }
 }
 .slider-landing_slide {
   display: flex;
@@ -46,8 +58,13 @@
   font-size: 1.5rem;
   line-height: 1.5rem;
   & li {
-    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 1vw;
   }
+}
+
+.slider-landing_text_ul {
+  list-style-image: url("../../images/star-list-style-img.png");
 }
 .slider-landing_btn-group {
   position: relative;

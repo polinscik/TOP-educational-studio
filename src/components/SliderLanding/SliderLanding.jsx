@@ -2,6 +2,9 @@ import "./SliderLanding.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import bgImg1 from "../../images/landing-slider-bg-1.png";
+import bgImg2 from "../../images/landing-slider-bg-2.png";
+import bgImg3 from "../../images/landing-slider-bg-3.png";
 
 function NextArrow(props) {
   const {className, style, onClick} = props;
@@ -52,82 +55,95 @@ export default function SliderLanding() {
   return (
     <div className="slider-landing">
       <Slider {...settings} className="slider-landing_arrow-style">
-        <div>
-          <div className="slider-landing_slide">
-            <h1 className="slider-landing_title">Привет!</h1>
-            <p className="slider-landing_text">
-              Мы одинаково круто обучаем английскому, русскому, саунд дизайну, 
-              аранжировке и работе в цифровых аудиостанциях!
-            </p>
-            <p className="slider-landing_text">
-              Выбирай курс, отправляй заявку и приступай к обучению!
-            </p>
-            <div className="slider-landing_btn-group">
-              <button className="slider-landing_btn">Узнать больше</button>
-              <img
-                className="slider-landing_arrow"
-                src="src/images/landing-btn-arrow.png"
-                alt="стрелка вправо"
-              />
+        <div className="slider-landing__bg-container">
+          <div
+            className="slider-landing__bg"
+            style={{
+              backgroundImage: "url(" + bgImg1 + ")",
+            }}>
+            <div className="slider-landing_slide">
+              <h1 className="slider-landing_title">Привет!</h1>
+              <p className="slider-landing_text">
+                Мы одинаково круто обучаем английскому, русскому, саунд
+                дизайну,  аранжировке и работе в цифровых аудиостанциях!
+              </p>
+              <p className="slider-landing_text">
+                Выбирай курс, отправляй заявку и приступай к обучению!
+              </p>
+              <div className="slider-landing_btn-group">
+                <button className="slider-landing_btn">Узнать больше</button>
+                <img
+                  className="slider-landing_arrow"
+                  src="src/images/landing-btn-arrow.png"
+                  alt="стрелка вправо"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <div className="slider-landing_slide">
-            <h1 className="slider-landing_title">Привет!</h1>
-            <p className="slider-landing_text">
-              Курсы английского языка для взрослых – это просто ТОП!
-            </p>
-            <ul className="slider-landing_text">
-              <li>Любой уровень</li>
-              <li>Обширное тематическое поле</li>
-              <li>Индивидуальный подход</li>
-              <li>Море разговорной практики</li>
-              <li>Дипломированные педагоги с огромным опытом</li>
-            </ul>
-            {/* <p className="slider-landing_text"></p>
-            <p className="slider-landing_text">Обширное тематическое поле</p>
-            <p className="slider-landing_text">Индивидуальный подход</p>
-            <p className="slider-landing_text">Море разговорной практики</p>
-            <p className="slider-landing_text">
-              Дипломированные педагоги с огромным опытом
-            </p> */}
-            <p className="slider-landing_text">
-              Для работы? Для путешествий? Для бизнеса? Для учёбы за границей?
-              Наш авторский подход придётся по душе ученику с любым запросом!
-            </p>
-            <div className="slider-landing_btn-group">
-              <button className="slider-landing_btn">Узнать больше</button>
-              <img
-                className="slider-landing_arrow"
-                src="src/images/landing-btn-arrow.png"
-                alt="стрелка вправо"
-              />
+        <div className="slider-landing__bg-container">
+          <div
+            className="slider-landing__bg"
+            style={{
+              backgroundImage: "url(" + bgImg2 + ")",
+            }}>
+            <div className="slider-landing_slide">
+              <p className="slider-landing_text">
+                Курсы английского языка для взрослых – это просто ТОП!
+              </p>
+              <ul className="slider-landing_text slider-landing_text_ul">
+                <li>Любой уровень</li>
+                <li>Обширное тематическое поле</li>
+                <li>Индивидуальный подход</li>
+                <li>Море разговорной практики</li>
+                <li>Дипломированные педагоги с огромным опытом</li>
+              </ul>
+              <p className="slider-landing_text">
+                Для работы? Для путешествий? Для бизнеса? Для учёбы за границей?
+              </p>
+              <p className="slider-landing_text">
+                Наш авторский подход придётся по душе ученику с любым запросом!
+              </p>
+              <div className="slider-landing_btn-group">
+                <button className="slider-landing_btn">Узнать больше</button>
+                <img
+                  className="slider-landing_arrow"
+                  src="src/images/landing-btn-arrow.png"
+                  alt="стрелка вправо"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <div className="slider-landing_slide">
-            <h1 className="slider-landing_title">Привет!</h1>
-            <p className="slider-landing_text">
-              Курсы по подготовке к ОГЭ и ЕГЭ по русскому и английскому языкам –
-              твой невероятный шанс подготовиться к экзаменам и заметно
-              «прокачать» язык!
-            </p>
-            <p className="slider-landing_text">
-              В школе тебя приговорили к провалу?
-            </p>
-            <p className="slider-landing_text">
-              Наши ТОПовые педагоги разрушат любой приговор!
-            </p>
-            <p className="slider-landing_text">«ТОП». Мы учим думать.</p>
-            <div className="slider-landing_btn-group">
-              <button className="slider-landing_btn">Узнать больше</button>
-              <img
-                className="slider-landing_arrow"
-                src="src/images/landing-btn-arrow.png"
-                alt="стрелка вправо"
-              />
+        <div className="slider-landing__bg-container">
+          <div
+            className="slider-landing__bg"
+            style={{
+              backgroundImage: "url(" + bgImg3 + ")",
+            }}>
+            <div className="slider-landing_slide">
+              <p className="slider-landing_text">
+                Курсы по подготовке к ОГЭ и ЕГЭ по русскому и английскому языкам
+                – твой невероятный шанс подготовиться к экзаменам и заметно
+                «прокачать» язык!
+              </p>
+              <p className="slider-landing_text">
+                В школе тебя приговорили к провалу?
+              </p>
+              <p className="slider-landing_text">
+                Наши ТОПовые педагоги разрушат любой приговор!
+              </p>
+              <p className="slider-landing_text">
+                Студия «ТОП». Мы учим думать.
+              </p>
+              <div className="slider-landing_btn-group">
+                <button className="slider-landing_btn">Узнать больше</button>
+                <img
+                  className="slider-landing_arrow"
+                  src="src/images/landing-btn-arrow.png"
+                  alt="стрелка вправо"
+                />
+              </div>
             </div>
           </div>
         </div>
