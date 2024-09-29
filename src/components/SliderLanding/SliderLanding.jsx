@@ -74,16 +74,28 @@ export default function SliderLanding() {
         </div>
         <div>
           <div className="slider-landing_slide">
-            <h1 className="slider-landing_title">Всем привет!</h1>
+            <h1 className="slider-landing_title">Привет!</h1>
             <p className="slider-landing_text">
-              Мы - семейная студия развития ТОП, которая помогает взрослым
-              раскрыть свои таланты и найти новые увлечения.
+              Курсы английского языка для взрослых – это просто ТОП!
             </p>
+            <ul className="slider-landing_text">
+              <li>Любой уровень</li>
+              <li>Обширное тематическое поле</li>
+              <li>Индивидуальный подход</li>
+              <li>Море разговорной практики</li>
+              <li>Дипломированные педагоги с огромным опытом</li>
+            </ul>
+            {/* <p className="slider-landing_text"></p>
+            <p className="slider-landing_text">Обширное тематическое поле</p>
+            <p className="slider-landing_text">Индивидуальный подход</p>
+            <p className="slider-landing_text">Море разговорной практики</p>
             <p className="slider-landing_text">
-              Наши курсы направлены на личностный рост, развитие креативности и
-              освоение новых навыков в комфортной и дружелюбной атмосфере.
+              Дипломированные педагоги с огромным опытом
+            </p> */}
+            <p className="slider-landing_text">
+              Для работы? Для путешествий? Для бизнеса? Для учёбы за границей?
+              Наш авторский подход придётся по душе ученику с любым запросом!
             </p>
-
             <div className="slider-landing_btn-group">
               <button className="slider-landing_btn">Узнать больше</button>
               <img
@@ -93,19 +105,22 @@ export default function SliderLanding() {
               />
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div>
           <div className="slider-landing_slide">
             <h1 className="slider-landing_title">Привет!</h1>
             <p className="slider-landing_text">
-              Мы верим, что учиться и развиваться никогда не поздно, и с нами вы
-              сможете сделать это увлекательно и эффективно. Присоединяйтесь к
-              нашей дружной студии, где каждый найдет занятие по душе и сможет
-              стать лучше версией самого себя!
+              Курсы по подготовке к ОГЭ и ЕГЭ по русскому и английскому языкам –
+              твой невероятный шанс подготовиться к экзаменам и заметно
+              «прокачать» язык!
             </p>
             <p className="slider-landing_text">
-              Выбирай курс, отправляй заявку и приступай к обучению!
+              В школе тебя приговорили к провалу?
             </p>
+            <p className="slider-landing_text">
+              Наши ТОПовые педагоги разрушат любой приговор!
+            </p>
+            <p className="slider-landing_text">«ТОП». Мы учим думать.</p>
             <div className="slider-landing_btn-group">
               <button className="slider-landing_btn">Узнать больше</button>
               <img

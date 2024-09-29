@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import './ReviewSlider.scss';
 import rightArrow from '../../images/right-arrow.png';
 import leftArrow from '../../images/left-arrow.png';
@@ -65,20 +65,40 @@ const testimonials = [
 const TestimonialsSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [expandedCard, setExpandedCard] = useState(null);
-    const itemsPerPage = 4;
-  
+    const [itemsPerPage, setItemsPerPage] = useState(4); 
+    const [maxLength, setMaxLength] = useState(570); 
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 570) {
+                setMaxLength(150);
+                setItemsPerPage(2); 
+            } else if (window.innerWidth <= 1024) {
+                setMaxLength(200);
+            } else {
+                setMaxLength(570);
+            }
+        };
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const next = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % Math.ceil(testimonials.length / itemsPerPage));
         setExpandedCard(null);
     };
-  
+
     const prev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + Math.ceil(testimonials.length / itemsPerPage)) % Math.ceil(testimonials.length / itemsPerPage));
         setExpandedCard(null);
     };
-  
+
     const currentTestimonials = testimonials.slice(currentIndex * itemsPerPage, (currentIndex + 1) * itemsPerPage);
-  
+
     return (
         <div className="testimonials-slider">
             <h2 className="testimonials-heading">Отзывы про нас</h2>
@@ -94,9 +114,9 @@ const TestimonialsSlider = () => {
                         return (
                             <div className={`testimonial-card ${isUpperRow ? 'upper' : 'lower'} ${isExpanded ? 'expanded' : ''}`} key={testimonial.id}>
                                 <p className="quote">
-                                    {isExpanded || testimonial.text.length <= 550 ? testimonial.text : `${testimonial.text.slice(0, 570)}...`}
+                                    {isExpanded || testimonial.text.length <= maxLength ? testimonial.text : `${testimonial.text.slice(0, maxLength)}...`}
                                 </p>
-                                {!isExpanded && testimonial.text.length > 550 && (
+                                {!isExpanded && testimonial.text.length > maxLength && (
                                     <button onClick={() => setExpandedCard(testimonial.id)} className="read-more">Читать больше</button>
                                 )}
                                 <div className="testimonial-footer">
@@ -105,8 +125,8 @@ const TestimonialsSlider = () => {
                                         <p>{testimonial.profession}</p>
                                     </div>
                                     <div className="product-container">
-                                    <div className="product-name">{testimonial.product}</div>
-                                </div>
+                                        <div className="product-name">{testimonial.product}</div>
+                                    </div>
                                 </div>
                             </div>
                         );
@@ -116,8 +136,8 @@ const TestimonialsSlider = () => {
                     <img src={rightArrow} alt="Right arrow" />
                 </button>
             </div>
-            <div class="leave-feedback-button">
-            <button className="leave-feedback">Оставить отзыв</button>
+            <div className="leave-feedback-button">
+                <button className="leave-feedback">Оставить отзыв</button>
             </div>
         </div>
     );

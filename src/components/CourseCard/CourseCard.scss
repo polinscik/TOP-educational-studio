@@ -1,0 +1,49 @@
+@import "../../style/mixins.scss";
+.courseCard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  background-position: center center;
+  flex-direction: column;
+  padding: 2vh 3vw;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+  @media (max-width: 1024px) {
+    min-height: 25vh;
+  }
+  @media (max-width: 768px) {
+    min-height: 20vh;
+  }
+}
+.courseCard__btn-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+  padding: 2vh 0;
+  width: fit-content;
+}
+.courseCard__btn {
+  border: none;
+  min-width: 10vw;
+  background-color: #0f1012;
+  border-radius: 5px;
+  &:hover {
+    background-color: black;
+  }
+}
+.courseCard__btn-text {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  color: white;
+  padding: 1vh 1vw;
+  font-size: 1rem;
+  @include goldText("../../images/gold.png");
+  @media (max-width: 768px) {
+    padding: 1vh 3vw;
+    font-size: 1.3rem;
+  }
+}
