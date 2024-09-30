@@ -18,6 +18,7 @@ function NextArrow(props) {
         maxWidth: "100%",
         width: "auto",
         height: "auto",
+        zIndex: "1",
       }}
       onClick={onClick}></img>
   );
@@ -86,6 +87,7 @@ export default function SliderLanding() {
             className="slider-landing__bg"
             style={{
               backgroundImage: "url(" + bgImg2 + ")",
+              backgroundPositionX: "25%",
             }}>
             <div className="slider-landing_slide">
               <p className="slider-landing_text">
@@ -120,6 +122,7 @@ export default function SliderLanding() {
             className="slider-landing__bg"
             style={{
               backgroundImage: "url(" + bgImg3 + ")",
+              backgroundPositionX: "20%",
             }}>
             <div className="slider-landing_slide">
               <p className="slider-landing_text">
