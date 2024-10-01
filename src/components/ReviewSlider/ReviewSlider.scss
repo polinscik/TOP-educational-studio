@@ -1,5 +1,6 @@
 @import "../../style/mixins.scss";
 
+
 .testimonials-slider {
   text-align: center;
   background-color: #0f1012;
@@ -14,18 +15,16 @@
   overflow: hidden;
 
 
-
   .testimonials-heading {
-    margin-bottom: 4vh;
     @include goldText("../../images/gold.png");
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     font-family: "Rounds Black";
     font-size: 2rem;
-    font-weight: 400;
     line-height: 2.3rem; 
     padding: 2vh;
+
     @media (max-width: 570px) {
       font-size: 1.5em;
     }
@@ -36,45 +35,49 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 
     .arrow {
       background: #282828;
-      width: 3rem;
-      height: 3rem; 
+      min-width: 50px;
+      min-height: 50px;
       gap: 0;
       margin: 1vh;
-      border-radius: 0.5rem; 
+      border-radius: 0.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       border: none;
       cursor: pointer;
+
+      @media (max-width: 570px) {
+        min-height: 30px;
+        min-width: 30px;
+      }
     }
 
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
-      
+
       @media (max-width: 570px) {
         grid-template-columns: 1fr;
         font-size: 0.8em;
-        
-        
+        row-gap: 4vh; 
       }
+
       .testimonial-card {
-        width: 40rem; 
         background-color: #f6f1de;
-        border-radius: 0.5rem; 
-        box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1); 
-        padding: 1.25rem; 
+        border-radius: 0.5rem;
+        box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+        padding: 1.25rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
         text-align: left;
-
+        margin: 10px 0;
 
         &.upper {
           height: 25vh; 
@@ -103,6 +106,14 @@
           cursor: pointer;
           text-align: right;
 
+          @media (max-width: 1024px) {
+            font-size: 0.9em;
+          }
+
+          @media (max-width: 570px) {
+            font-size: 0.8em;
+          }
+
           &:hover {
             opacity: 0.7;
           }
@@ -110,9 +121,18 @@
 
         .testimonial-footer {
           display: flex;
-          justify-content: space-between;
-          align-items: flex-end;
-          margin-bottom: 0.5rem; 
+          justify-content: space-between; 
+          align-items: flex-end; 
+          margin-bottom: 0.5rem;
+
+          @media (max-width: 1024px) {
+            font-size: 0.9em;
+          }
+
+          @media (max-width: 570px) {
+            font-size: 0.8em;
+          }
+
           .author-info {
             text-align: left;
 
@@ -124,9 +144,10 @@
               }
             }
           }
+
           .product-name {
             height: 2.625rem; 
-            min-width: 14.5rem; 
+            max-width: 14.5rem; 
             background-color: #0f1012;
             color: white;
             padding: 0.5rem 0.625rem;
@@ -138,6 +159,14 @@
             text-align: center;
             font-weight: 700;
             @include goldText("../../images/gold.png");
+
+            @media (max-width: 1024px) {
+              font-size: 1.2em;
+            }
+
+            @media (max-width: 570px) {
+              font-size: 1em;
+            }
           }
         }
       }
@@ -150,13 +179,20 @@
     border-radius: 0.5rem; 
     background-color: #282828; 
     cursor: pointer;
-    margin: 3vh auto 0 auto; 
+    margin: 3vh auto 0; 
     margin-bottom: 1rem; 
-    @media (max-width: 570px) {
-      max-width:15rem;
-      max-height: 2.5rem;
-      
+    font-size: 24px; 
+
+    @media (max-width: 1024px) {
+      max-width: 18rem;
+      max-height: 3rem;
     }
+
+    @media (max-width: 570px) {
+      max-width: 15rem;
+      max-height: 2.5rem;
+    }
+
     &:hover {
       opacity: 0.8; 
     }
@@ -165,12 +201,16 @@
   .leave-feedback {
     border: none;
     margin-top: 1rem; 
-    font-size: 1.5rem; 
+    font-size: 24px; 
     font-weight: 700;
     @include goldText("../../images/gold.png");
+
+    @media (max-width: 1024px) {
+      font-size: 1.5rem; 
+    }
+
     @media (max-width: 570px) {
-      font-size: 1rem;
-    align-items: center;
+      font-size: 1rem; 
     }
   }
 
@@ -185,5 +225,30 @@
     justify-content: center;
     text-align: center;
 
+    @media (max-width: 1024px) {
+      max-height: 2rem; 
+      min-width: 12rem;   
+    }
+
+    @media (max-width: 570px) {
+      max-height: 1.5rem; 
+      min-width: 10rem;   
+    }
+  }
+}
+
+.left {
+  margin-right: 10px; 
+}
+
+.right {
+  margin-left: 10px; 
+}
+
+@media (max-width: 570px) {
+  .arrow {
+    img {
+      width: 10px; 
+    }
   }
 }
