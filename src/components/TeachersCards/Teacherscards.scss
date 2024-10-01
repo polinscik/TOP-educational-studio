@@ -22,7 +22,6 @@
   }
   
 
-
   .teachers-heading {
     margin-bottom: 4vh;
     @include goldText("../../images/gold.png");
@@ -31,7 +30,7 @@
     text-transform: uppercase;
     font-family: "Rounds Black";
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 2.3rem;
     @media (max-width: 570px) {
       font-size: 1.8em;
