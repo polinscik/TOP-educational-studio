@@ -16,6 +16,10 @@
   margin: 10vh 0;
   max-width: 100%;
   height: fit-content;
+  @media (max-width: 570px) {
+    background-image:  url("../../images/Vector_small2.png");
+    background-repeat: repeat-y;
+  }
   
 
 
