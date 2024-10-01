@@ -72,10 +72,10 @@ const TestimonialsSlider = () => {
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 570) {
-                setMaxLength(300);
+                setMaxLength(200);
                 setItemsPerPage(2); 
             } else if (window.innerWidth <= 1024) {
-                setMaxLength(215);
+                setMaxLength(200);
             } else {
                 setMaxLength(570);
             }

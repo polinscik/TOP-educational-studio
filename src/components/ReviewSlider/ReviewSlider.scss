@@ -24,9 +24,6 @@
     line-height: 2.3rem; 
     padding: 2vh;
     font-weight: 700;
-    @media (max-width: 570px) {
-      font-size: 1.8em;
-    }
   }
 
   .slider-container {
@@ -59,7 +56,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2.5rem;
-
+      @media (max-width: 1024px) {
+        font-size: 0.9em;
+        row-gap: 4vh; 
+      }
       @media (max-width: 570px) {
         grid-template-columns: 1fr;
         font-size: 0.8em;
