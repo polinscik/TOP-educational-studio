@@ -58,6 +58,17 @@
 .course-page__desc-container {
   grid-area: description;
 }
+.course-page__desc {
+  font-family: "Comfortaa";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.115em;
+  text-align: left;
+}
+.course-page__desc ul {
+  list-style-position: inside;
+  list-style-type: none;
+}
 .course-page__price-container {
   grid-area: price;
 }

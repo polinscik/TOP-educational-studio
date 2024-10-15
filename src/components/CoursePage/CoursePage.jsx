@@ -1,4 +1,5 @@
 import "./CoursePage.scss";
+import Button from "../Button/Button";
 
 function CoursePage() {
   return (
@@ -23,7 +24,6 @@ function CoursePage() {
             250-300 процентов. Это не мифы Древней Греции, это – проверенная
             опытом статистика.
           </p>
-          <button className="course-page__desc-btn">Читать дальше</button>
           <p className="course-page__desc">
             На курсе мы:
             <ul>
@@ -38,6 +38,9 @@ function CoursePage() {
             Школьная программа после прохождения нашего курса будет вашему
             ребёнку не просто по плечу, она будет ему по колено!
           </p>
+          <Button classname="btn btn_gold course-page__desc-btn">
+            Читать дальше
+          </Button>
         </div>
         <div className="course-page__price-container">
           <div className="course-page__prices">
@@ -48,7 +51,9 @@ function CoursePage() {
             <p className="course-page__price-desc">Урок в группе</p>
             <p className="course-page__price">700 ₽</p>
           </div>
-          <button className="course-page__price-btn">Записаться</button>
+          <Button classname="btn btn_gold course-page__price-btn">
+            Записаться
+          </Button>
         </div>
       </div>
       <div className="course-page__divider"></div>
