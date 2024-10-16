@@ -10,6 +10,7 @@ export default function MainPage() {
     <div style={{backgroundColor: "#0f1012"}}>
       <SliderLanding></SliderLanding>
       <CourseCards></CourseCards>
+      <CourseCards></CourseCards>
       <TeachersCards />
       <ReviewSlider />
     </div>
