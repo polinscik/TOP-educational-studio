@@ -9,9 +9,9 @@ export default function MainPage() {
   return (
     <Fragment>
       <SliderLanding></SliderLanding>
+      <CourseCards></CourseCards>
       <TeachersCards />
       <ReviewSlider />
-      <CourseCards></CourseCards>
     </Fragment>
   );
 }
