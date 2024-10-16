@@ -41,7 +41,9 @@ const teachersData = [
 const TeachersCards = () => {
   return (
     <div className="teachers-container">
-      <h2 className="teachers-heading">Наши преподаватели</h2>
+      <h2 className="teachers-heading" id="teachers-title">
+        Наши преподаватели
+      </h2>
       <div className="cards-container">
         {teachersData.map((teacher) => (
           <div className="card" key={teacher.name}>
