@@ -7,8 +7,11 @@
   @media (max-width: 1024px) {
     background-position: center center;
   }
-  background-image: url("../../images/bg-english-students.png");
-  min-height: 75vh;
+  min-height: 100vh;
+}
+
+.course-page_eng-child {
+  background-image: url("../../../images/bg-english-students.png");
 }
 
 .course-page div.course-page__divider:last-child {

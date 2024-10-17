@@ -1,7 +1,7 @@
 import "./CoursePageEngChild.scss";
 import {Fragment} from "react";
-import CoursePageTitle from "../CoursePageElements/CoursePageTitle/CoursePageTitle";
-import CoursePageRow from "../CoursePageElements/CoursePageRow/CoursePageRow";
+import CoursePageTitle from "../../CoursePageElements/CoursePageTitle/CoursePageTitle";
+import CoursePageRow from "../../CoursePageElements/CoursePageRow/CoursePageRow";
 
 function JuniorRowAdditionalDesc() {
   return (
@@ -118,7 +118,7 @@ const PAGE_DATA = {
 
 function CoursePageEngChild() {
   return (
-    <section className="course-page">
+    <section className="course-page course-page_eng-child">
       <CoursePageTitle title={PAGE_DATA.title}></CoursePageTitle>
       {PAGE_DATA.rows.map((row) => (
         <CoursePageRow priceArray={row.priceArray} {...row}></CoursePageRow>

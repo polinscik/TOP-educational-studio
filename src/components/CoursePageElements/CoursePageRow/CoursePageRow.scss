@@ -13,6 +13,7 @@
   align-self: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .course-page__row-title {
   @include goldText("../../../images/gold.png");
@@ -20,7 +21,10 @@
   font-size: 2.25rem;
   font-weight: 40;
   line-height: 1.2em;
+  text-align: center;
+  word-wrap: break-word;
 }
+
 .course-page__desc-container {
   grid-area: description;
 }
