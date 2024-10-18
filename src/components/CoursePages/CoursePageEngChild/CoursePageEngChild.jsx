@@ -6,7 +6,7 @@ import CoursePageRow from "../../CoursePageElements/CoursePageRow/CoursePageRow"
 function JuniorRowAdditionalDesc() {
   return (
     <Fragment>
-      На курсе мы:
+      <p>На курсе мы:</p>
       <ul>
         <li>- Учимся читать;</li>
         <li>- Учимся писать ПРОПИСЬЮ;</li>
@@ -16,15 +16,17 @@ function JuniorRowAdditionalDesc() {
         </li>
         <li>- Изучаем азы грамматики.</li>
       </ul>
-      Школьная программа после прохождения нашего курса будет вашему ребёнку не
-      просто по плечу, она будет ему по колено!
+      <p>
+        Школьная программа после прохождения нашего курса будет вашему ребёнку
+        не просто по плечу, она будет ему по колено!
+      </p>
     </Fragment>
   );
 }
 function TeenRowAdditionalDesc() {
   return (
     <Fragment>
-      На курсе мы:
+      <p>На курсе мы:</p>
       <ul>
         <li>- восполняем пробелы в знаниях;</li>
         <li>
@@ -44,8 +46,10 @@ function TeenRowAdditionalDesc() {
 function SuperTeenRowMainDesc() {
   return (
     <Fragment>
-      Курс «Super Teen» разработан для сознательных учеников 9-11 классов,
-      желающих:
+      <p>
+        Курс «Super Teen» разработан для сознательных учеников 9-11 классов,
+        желающих:
+      </p>
       <ul>
         <li>- "подтянуть" английский;</li>
         <li>- развивать свой английский;</li>
@@ -59,17 +63,19 @@ function SuperTeenRowMainDesc() {
 }
 function SuperTeenRowAdditionalDesc() {
   return (
-    <div style={{marginTop: "1.5vh"}}>
-        На курсе мы:
+    <Fragment>
+      <p style={{marginTop: "1.5vh"}}>На курсе мы:</p> 
       <ul>
         <li>- восполняем пробелы в знаниях;</li>
         <li>- повторяем школьную программу;</li>
         <li>- практикуемся в разговорном английском;</li>
         <li>- изучаем тематическую лексику, интересную молодёжи.</li>
       </ul>
-      Осознал, что английский пригодится тебе в жизни? Скорее к нам на уроки,
-      где будет много практики!
-    </div>
+      <p>
+        Осознал, что английский пригодится тебе в жизни? Скорее к нам на уроки,
+        где будет много практики!
+      </p>
+    </Fragment>
   );
 }
 

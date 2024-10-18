@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Rounds Black";
-  src: url("./Fonts/RoundsBlack.ttf") format("truetype");
+  src: url("/Fonts/RoundsBlack.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

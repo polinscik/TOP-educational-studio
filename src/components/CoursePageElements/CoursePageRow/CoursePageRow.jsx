@@ -24,12 +24,12 @@ function CoursePageRow({
         </div>
         <div className="course-page__desc-container">
           <div className="course-page__desc">{rowMainDesc}</div>
-          {expanded && (
-            <div className="course-page__desc">{rowAdditionalDesc}</div>
-          )}
+          <div className="course-page__desc">
+            {expanded && rowAdditionalDesc}
+          </div>
           {rowAdditionalDesc && (
             <Button
-              classname="btn btn_gold course-page__desc-btn"
+              classname="btn btn_gold course-page__desc-btn btn-transition"
               onClick={() => setExpanded(!expanded)}>
               {expanded ? "Скрыть" : "Читать дальше"}
             </Button>

@@ -8,7 +8,7 @@ const Button = forwardRef(function Button(
   return (
     <button
       ref={ref}
-      className={`btn ${classname}`}
+      className={classname}
       onClick={onClick}
       disabled={disabled}>
       {children}

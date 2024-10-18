@@ -22,7 +22,7 @@ function YouthRowMainDesc() {
 function YoungRowAdditionalDesc() {
   return (
     <Fragment>
-      На курсе мы:
+      <p>На курсе мы:</p>
       <ul>
         <li>- учимся красиво писать по-русски;</li>
         <li>- изучаем нормы русского языка;</li>
@@ -43,7 +43,7 @@ function YoungRowAdditionalDesc() {
 function YouthRowAdditionalDesc() {
   return (
     <Fragment>
-      На курсе мы:
+      <p>На курсе мы:</p>
       <ul>
         <li>- учимся красиво писать по-русски;</li>
         <li>- изучаем нормы русского языка;</li>
@@ -59,7 +59,7 @@ function YouthRowAdditionalDesc() {
 function CoolRowAdditionalDesc() {
   return (
     <Fragment>
-      На курсе мы:
+      <p>На курсе мы:</p>
       <ul>
         <li>- изучаем нормы русского языка;</li>
         <li>- изучаем грамматику;</li>
