@@ -1,0 +1,37 @@
+@import "../../../style/mixins.scss";
+//heading
+.course-page__heading {
+  padding: 5vh 0 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 25% 1fr 15%;
+  grid-template-areas: "space heading price";
+  & {
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5vh 5vh 0;
+    }
+  }
+}
+.course-page__title {
+  grid-area: heading;
+  @include goldText("../../../images/gold.png");
+  font-family: "Rounds Black";
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: left;
+  hyphens: auto;
+}
+.course-page__title_price {
+  grid-area: price;
+  text-align: center;
+  & {
+    @media (max-width: 1024px) {
+      display: none;
+      hyphens: auto;
+    }
+  }
+}

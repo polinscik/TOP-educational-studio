@@ -7,11 +7,11 @@ import CourseCards from "../CourseCards/CourseCards";
 
 export default function MainPage() {
   return (
-    <Fragment>
+    <div style={{backgroundColor: "#0f1012"}}>
       <SliderLanding></SliderLanding>
       <CourseCards></CourseCards>
       <TeachersCards />
       <ReviewSlider />
-    </Fragment>
+    </div>
   );
 }

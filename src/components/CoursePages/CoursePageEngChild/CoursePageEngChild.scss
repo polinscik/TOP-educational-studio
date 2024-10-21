@@ -1,0 +1,19 @@
+.course-page {
+  color: #f6f1de;
+  padding: 2vh 4vw;
+  min-height: 100vh;
+  background-color: #0f1012d9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (max-width: 1024px) {
+    background-position: center center;
+  }
+}
+
+.course-page_eng-child {
+  background-image: url("../../../images/bg-english-students.png");
+}
+
+.course-page div.course-page__divider:last-child {
+  display: none;
+}
