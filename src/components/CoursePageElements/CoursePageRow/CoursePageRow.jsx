@@ -29,13 +29,16 @@ function CoursePageRow({
           </div>
           {rowAdditionalDesc && (
             <Button
-              classname="btn btn_gold course-page__desc-btn btn-transition"
+              classname="btn btn_gold course-page__desc-btn"
               onClick={() => setExpanded(!expanded)}>
               {expanded ? "Скрыть" : "Читать дальше"}
             </Button>
           )}
         </div>
         <div className="course-page__price-container">
+          <p className="course-page__title_price_mobile course-page__title course-page__title_price ">
+            Прайс
+          </p>
           {priceArray.map((element) => (
             <div className="course-page__prices">
               <p className="course-page__price-desc">{element.priceName}</p>

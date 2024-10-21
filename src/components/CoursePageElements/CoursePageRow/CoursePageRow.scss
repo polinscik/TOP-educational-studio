@@ -7,6 +7,13 @@
   grid-template-rows: 1fr;
   grid-template-columns: 15% 1fr 15%;
   grid-template-areas: "name description  price";
+  & {
+    @media (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2vh;
+    }
+  }
 }
 .course-page__row-title-container {
   grid-area: name;
@@ -35,7 +42,6 @@
   font-weight: 600;
   line-height: 1.115em;
   text-align: left;
-  transition: all 2s ease-in;
   hyphens: auto;
 }
 .course-page__desc ul {
@@ -72,4 +78,13 @@
   background-color: #e1bb6d;
   width: auto;
   height: 2px;
+}
+
+.course-page__title_price_mobile {
+  display: none;
+  & {
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
 }
