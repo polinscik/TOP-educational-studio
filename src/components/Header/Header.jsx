@@ -1,82 +1,58 @@
-import "./Header.scss";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  About,
+  Adults,
+  Children,
+  Music,
+  OnlineTests,
+} from "../NavComponents/NavComponents";
 import Logo from "/src/images/logo.svg";
 import TgIcon from "/src/images/telegram-icon.svg";
 import BurgerBtn from "/src/images/menu-burger-horizontal-bold.svg";
 import CloseBtn from "/src/images/close-btn-burger-menu.svg";
-import { useState } from "react";
+import "./Header.scss";
 
 export default function Header() {
-  const [isOpen, setOpen] = useState();
+  const [open, setOpen] = useState(false);
+
+  function handleBurgerMenuBtn() {
+    setOpen(!open);
+  }
+
   return (
     <div className="wrapper">
       <div className="header-content-wrap">
         <div className="header-logo-content">
           <p>Выбирай лучшее!</p>
-          <img src={Logo} alt="ТОП" />
+          <NavLink to={"/"}>
+            <img src={Logo} alt="ТОП" />
+          </NavLink>
           <p>Вкладывайся в будущее!</p>
         </div>
-        <nav className={`header-nav ${isOpen ? "burger-active" : ""}`}>
+        <nav
+          className={`header-nav ${open ? "burger-active" : ""}`}
+          onClick={handleBurgerMenuBtn}
+        >
           <ul className="menu">
             <li>
               <p className="courses-title">Курсы</p>
-              <ul className="courses-link-submenu">
-                <li>
-                  <p className="submenu-title">для Взрослых</p>
-                  <ul className="adults-submenu submenu">
-                    <li>
-                      <a href="#">Английский</a>
-                    </li>
-                    <li>
-                      <a href="#">Русский</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <p lassName="submenu-title">для Школьников</p>
-                  <ul className="childs-submenu submenu">
-                    <li>
-                      <a href="#">Английский</a>
-                    </li>
-                    <li>
-                      <a href="#">Русский</a>
-                    </li>
-                    <li>
-                      <a href="#">Подготовка к ЕГЭ/ОГЭ</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Музыка</a>
-                </li>
+              <ul className="courses-link-submenu submenu">
+                <Adults></Adults>
+                <Children></Children>
+                <Music></Music>
               </ul>
             </li>
             <li>
               <p className="test-link">Онлайн тесты</p>
               <ul className="test-submenu submenu">
-                <li>
-                  <a href="">тренажёр ЕГЭ/ОГЭ</a>
-                </li>
-                <li>
-                  <a href="">тест по аглийскому</a>
-                </li>
-                <li>
-                  <a href="">тест по русскому</a>
-                </li>
+                <OnlineTests></OnlineTests>
               </ul>
             </li>
             <li>
               <p className="about-link">О нас</p>
-              <ul className="about submenu">
-                <li>
-                  <a href="#about-title">О нас</a>
-                </li>
-                <li>
-                  <a href="#teachers-title">Преподаватели</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                </li>
+              <ul className="about-submenu submenu">
+                <About></About>
               </ul>
             </li>
             <li className="telegram-link">
@@ -92,16 +68,16 @@ export default function Header() {
             className="header-contacts-telegram"
           >
             <div className="telegram-icon">
-              <img src={TgIcon} alt="" />
+              <img src={TgIcon} alt="Телеграм" />
             </div>
             <p>+77011234567</p>
           </a>
         </div>
-        <button className="header-burger-btn" onClick={() => setOpen(!isOpen)}>
-          {isOpen ? (
-            <img src={CloseBtn} alt="" />
+        <button className="header-burger-btn" onClick={handleBurgerMenuBtn}>
+          {open ? (
+            <img src={CloseBtn} alt="Закрыть меню" />
           ) : (
-            <img src={BurgerBtn} alt="" />
+            <img src={BurgerBtn} alt="Меню" />
           )}
         </button>
       </div>
