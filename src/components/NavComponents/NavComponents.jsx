@@ -66,7 +66,7 @@ export function OnlineTests() {
       href: "/",
     },
     { name: "Русский", href: "/" },
-    { name: "Тренажёр ЕГЭ/ОГЭ", href: "/russian-for-children" },
+    { name: "Тренажёр ЕГЭ/ОГЭ", href: "/" },
   ];
 
   return (
