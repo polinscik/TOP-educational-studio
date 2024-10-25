@@ -51,6 +51,7 @@ const PAGE_DATA = {
   rows: [
     {
       rowTitle: "EXAMS",
+      rowId: "exams",
       rowImg: "",
       rowImgAlt: "",
       rowMainDesc: <ExamsRowMainDesc></ExamsRowMainDesc>,
@@ -62,6 +63,7 @@ const PAGE_DATA = {
     },
     {
       rowTitle: "ВЫПУСКНОЙ РУСИЧ",
+      rowId: "graduateRussian",
       rowImg: "",
       rowImgAlt: "",
       rowMainDesc: <GraduateRowMainDesc></GraduateRowMainDesc>,
@@ -79,7 +81,10 @@ function CoursePageExams() {
     <section className="course-page course-page_exams">
       <CoursePageTitle title={PAGE_DATA.title}></CoursePageTitle>
       {PAGE_DATA.rows.map((row) => (
-        <CoursePageRow priceArray={row.priceArray} {...row}></CoursePageRow>
+        <CoursePageRow
+          priceArray={row.priceArray}
+          {...row}
+          key={row.rowId}></CoursePageRow>
       ))}
     </section>
   );

@@ -84,6 +84,7 @@ const PAGE_DATA = {
   rows: [
     {
       rowTitle: "JUNIOR",
+      rowId: "juniorEng",
       rowImg: "src/images/grade1to4.png",
       rowImgAlt: "1-4 класс",
       rowMainDesc:
@@ -96,6 +97,7 @@ const PAGE_DATA = {
     },
     {
       rowTitle: "TEEN",
+      rowId: "teenEng",
       rowImg: "src/images/grade5to8.png",
       rowImgAlt: "5-8 класс",
       rowMainDesc:
@@ -108,6 +110,7 @@ const PAGE_DATA = {
     },
     {
       rowTitle: "SUPER TEEN",
+      rowId: "superteenEng",
       rowImg: "src/images/grade9to11.png",
       rowImgAlt: "9-11 класс",
       rowMainDesc: <SuperTeenRowMainDesc></SuperTeenRowMainDesc>,
@@ -127,7 +130,10 @@ function CoursePageEngChild() {
     <section className="course-page course-page_eng-child">
       <CoursePageTitle title={PAGE_DATA.title}></CoursePageTitle>
       {PAGE_DATA.rows.map((row) => (
-        <CoursePageRow priceArray={row.priceArray} {...row}></CoursePageRow>
+        <CoursePageRow
+          priceArray={row.priceArray}
+          {...row}
+          key={row.rowId}></CoursePageRow>
       ))}
     </section>
   );

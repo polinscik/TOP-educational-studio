@@ -70,6 +70,7 @@ const PAGE_DATA = {
   rows: [
     {
       rowTitle: "ХИТМЕЙКЕР",
+      rowId: "hitmaker",
       rowImg: "",
       rowImgAlt: "",
       rowMainDesc: <HitmakerRowMainDesc></HitmakerRowMainDesc>,
@@ -78,6 +79,7 @@ const PAGE_DATA = {
     },
     {
       rowTitle: "МАСТЕР ЗВУКОФФ",
+      rowId: "soundDesign",
       rowImg: "",
       rowImgAlt: "",
       rowMainDesc: <MasterRowMainDesc></MasterRowMainDesc>,
@@ -92,7 +94,10 @@ function CoursePageMusic() {
     <section className="course-page course-page_music">
       <CoursePageTitle title={PAGE_DATA.title}></CoursePageTitle>
       {PAGE_DATA.rows.map((row) => (
-        <CoursePageRow priceArray={row.priceArray} {...row}></CoursePageRow>
+        <CoursePageRow
+          priceArray={row.priceArray}
+          {...row}
+          key={row.rowId}></CoursePageRow>
       ))}
     </section>
   );
