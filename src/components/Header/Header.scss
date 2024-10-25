@@ -10,6 +10,10 @@
   font-size: 1.25rem;
   position: relative;
 
+  a {
+    color: #F6F1DE;
+  }
+
   @media (max-width: 1050px) {
     font-size: 1rem;
   }
@@ -19,11 +23,6 @@
     align-items: center;
     padding: 1.5vh 2vh;
   }
-}
-
-
-.wrapper a {
-  color: #F6F1DE;
 }
 
 .header-content-wrap {
@@ -169,6 +168,14 @@
       text-transform: uppercase;
       padding-top: 6px;
     }
+
+    .courses-link-submenu {
+      margin-left: 6px;
+
+      p {
+        text-transform: none;
+      }
+    }
   }
 
   li {
@@ -190,6 +197,14 @@
   list-style-type: none;
 }
 
+.submenu {
+  @media (max-width: 820px) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 6px;
+  }
+}
+
 .courses-title::after,
 .test-link::after,
 .about-link::after {
@@ -202,7 +217,7 @@
 
 .courses-link-submenu,
 .test-submenu,
-.about {
+.about-submenu {
   @media (min-width: 821px) {
     position: absolute;
     background-color: #282828;
@@ -218,7 +233,7 @@
 }
 
 .courses-link-submenu,
-.about {
+.about-submenu {
   @media (min-width: 821px) {
     width: 210%;
   }
@@ -233,7 +248,7 @@
 
 .menu>li:hover .courses-link-submenu,
 .menu>li:hover .test-submenu,
-.menu>li:hover .about {
+.menu>li:hover .about-submenu {
   @media (min-width: 821px) {
     opacity: 1;
     transform: scaleY(1);
@@ -247,13 +262,5 @@
 
   @media (max-width: 820px) {
     display: block;
-  }
-}
-
-.submenu {
-  @media (max-width: 820px) {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-left: 6px;
   }
 }
