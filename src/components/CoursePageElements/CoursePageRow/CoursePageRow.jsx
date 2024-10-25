@@ -40,7 +40,7 @@ function CoursePageRow({
             Прайс
           </p>
           {priceArray.map((element) => (
-            <div className="course-page__prices">
+            <div className="course-page__prices" key={element.price}>
               <p className="course-page__price-desc">{element.priceName}</p>
               <p className="course-page__price">
                 <span>{element.price}</span> ₽
