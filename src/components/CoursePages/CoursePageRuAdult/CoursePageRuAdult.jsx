@@ -36,6 +36,7 @@ const PAGE_DATA = {
   rows: [
     {
       rowTitle: "ЗРЕЛЫЙ РУСИЧ",
+      rowId: "adultRussian",
       rowImg: "",
       rowImgAlt: "",
       rowMainDesc: <AdultRowMainDesc></AdultRowMainDesc>,
@@ -53,7 +54,10 @@ function CoursePageRuAdult() {
     <section className="course-page course-page_ru-adult">
       <CoursePageTitle title={PAGE_DATA.title}></CoursePageTitle>
       {PAGE_DATA.rows.map((row) => (
-        <CoursePageRow priceArray={row.priceArray} {...row}></CoursePageRow>
+        <CoursePageRow
+          priceArray={row.priceArray}
+          {...row}
+          key={row.rowId}></CoursePageRow>
       ))}
     </section>
   );
