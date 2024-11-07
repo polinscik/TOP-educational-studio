@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import "./SliderLanding.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -5,9 +6,11 @@ import Slider from "react-slick";
 import bgImg1 from "../../images/landing-slider-bg-1.png";
 import bgImg2 from "../../images/landing-slider-bg-2.png";
 import bgImg3 from "../../images/landing-slider-bg-3.png";
+import Form from "../Form/Form";
 
 function NextArrow(props) {
-  const {className, style, onClick} = props;
+  const { className, style, onClick } = props;
+
   return (
     <img
       src="src/images/right-arrow.png"
@@ -25,7 +28,8 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  const {className, style, onClick} = props;
+  const { className, style, onClick } = props;
+
   return (
     <img
       src="src/images/left-arrow.png"
@@ -53,8 +57,24 @@ export default function SliderLanding() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="slider-landing">
+      {windowWidth >= 1200 && <Form />}
       <Slider {...settings} className="slider-landing_arrow-style">
         <div className="slider-landing__bg-container">
           <div
