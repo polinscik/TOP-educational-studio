@@ -3,6 +3,7 @@ import {createRoot} from "react-dom/client";
 import "./style/index.css";
 import {
   createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
   Route,
   RouterProvider,
@@ -17,7 +18,7 @@ import CoursePageMusic from "./components/CoursePages/CoursePageMusic/CoursePage
 import CoursePageEngAdult from "./components/CoursePages/CoursePageEngAdult/CoursePageEngAdult.jsx";
 import CoursePageRuAdult from "./components/CoursePages/CoursePageRuAdult/CoursePageRuAdult.jsx";
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route
       path="/"

@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://polinscik.github.io/TOP-educational-studio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,7 +21,6 @@
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1"
   },
-  "homepage": "https://polinscik.github.io/TOP-educational-studio",
 
   "devDependencies": {
     "@eslint/js": "^9.9.0",
