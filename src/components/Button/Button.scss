@@ -1,3 +1,4 @@
+@import "../../style/mixins.scss";
 .btn {
   border: none;
   border-radius: 5px;
@@ -23,4 +24,9 @@
 }
 .course-page__desc-btn {
   margin-top: 1.5vh;
+}
+.btn_footer {
+  @include goldText("../../images/gold.png");
+  font-size: 1.2rem;
+  padding: 3vh 2.5vw;
 }
