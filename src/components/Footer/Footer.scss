@@ -1,0 +1,114 @@
+@import "../../style/mixins.scss";
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #282828;
+  min-height: 100vh;
+  padding: 8vh;
+  padding-bottom: 1vh;
+  align-items: center;
+  row-gap: 5vh;
+}
+.footer__btn {
+  background-color: #0f1012;
+  border-radius: 5px;
+  &:hover {
+    background-color: #000;
+  }
+}
+.footer__requisites {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2vh;
+  font-weight: 300;
+}
+.requisites__title {
+  font-family: "Rounds Black";
+  @include goldText("../../images/gold.png");
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+}
+.requisites__text {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.1em;
+  text-align: center;
+}
+.footer__brand {
+  color: #f6f1de;
+}
+.brand {
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto) minmax(100px, auto);
+  grid-template-areas:
+    "text1 text2"
+    "text3 text3"
+    "logo1 logo1"
+    "logo2 logo2"
+    "license license";
+  text-align: center;
+  row-gap: 1.5vh;
+  align-items: center;
+  justify-items: center;
+  @media (max-width: 768px) {
+    grid-template-rows: repeat(5, auto) minmax(100px, auto);
+    grid-template-areas:
+      "text1 text1"
+      "text2 text2"
+      "text3 text3"
+      "logo1 logo1"
+      "logo2 logo2"
+      "license license";
+  }
+}
+.brand__slogan {
+  font-family: "Rounds Black";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2em;
+}
+.brand__slogan_1 {
+  grid-area: text1;
+  justify-self: start;
+  margin-left: 1vw;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+.brand__slogan_2 {
+  grid-area: text2;
+  @media (max-width: 768px) {
+    justify-self: end;
+  }
+}
+.brand__slogan_3 {
+  font-size: 1.25rem;
+  line-height: 1.2em;
+  grid-area: text3;
+  @media (max-width: 768px) {
+    justify-self: start;
+    margin-left: 15vw;
+  }
+}
+.brand__logo {
+  margin-top: 1vh;
+  max-width: 100%;
+}
+
+.brand__logo_1 {
+  grid-area: logo1;
+}
+.brand__logo_2 {
+  grid-area: logo2;
+}
+.brand__license {
+  grid-area: license;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1em;
+}

@@ -1,7 +1,7 @@
-// import {useState} from "react";
 import "./App.scss";
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
@@ -12,7 +12,9 @@ function App() {
       <main>
         <Outlet></Outlet>
       </main>
-      <p>Footer component</p>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </>
   );
 }

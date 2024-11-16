@@ -1,6 +1,5 @@
 @import "../../style/mixins.scss";
 
-
 .testimonials-slider {
   text-align: center;
   background-color: #0f1012;
@@ -8,10 +7,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  margin: 10vh 0;
+  margin: 10vh 0 0;
   max-width: 100%;
   height: fit-content;
-  padding-bottom: 20px;
+  padding-bottom: 5vh;
   overflow: hidden;
 
   .testimonials-heading {
@@ -21,7 +20,7 @@
     text-transform: uppercase;
     font-family: "Rounds Black";
     font-size: 2rem;
-    line-height: 2.3rem; 
+    line-height: 2.3rem;
     padding: 2vh;
     font-weight: 700;
   }
@@ -58,12 +57,12 @@
       gap: 2.5rem;
       @media (max-width: 1024px) {
         font-size: 0.9em;
-        row-gap: 4vh; 
+        row-gap: 4vh;
       }
       @media (max-width: 570px) {
         grid-template-columns: 1fr;
         font-size: 0.8em;
-        row-gap: 4vh; 
+        row-gap: 4vh;
       }
 
       .testimonial-card {
@@ -79,11 +78,11 @@
         margin: 10px 0;
 
         &.upper {
-          height: 25vh; 
+          height: 25vh;
         }
 
         &.lower {
-          height: 35vh; 
+          height: 35vh;
         }
 
         &.expanded {
@@ -96,7 +95,7 @@
         }
 
         .quote {
-          margin-bottom: 1rem; 
+          margin-bottom: 1rem;
         }
 
         .read-more {
@@ -120,8 +119,8 @@
 
         .testimonial-footer {
           display: flex;
-          justify-content: space-between; 
-          align-items: flex-end; 
+          justify-content: space-between;
+          align-items: flex-end;
           margin-bottom: 0.5rem;
 
           @media (max-width: 1024px) {
@@ -145,12 +144,12 @@
           }
 
           .product-name {
-            height: 2.625rem; 
-            max-width: 14.5rem; 
+            height: 2.625rem;
+            max-width: 14.5rem;
             background-color: #0f1012;
             color: white;
             padding: 0.5rem 0.625rem;
-            border-radius: 0.5rem; 
+            border-radius: 0.5rem;
             font-size: 1.25rem;
             display: flex;
             align-items: center;
@@ -173,14 +172,14 @@
   }
 
   .leave-feedback-button {
-    width: 22.5rem; 
-    height: 3.5625rem; 
-    border-radius: 0.5rem; 
-    background-color: #282828; 
+    width: 22.5rem;
+    height: 3.5625rem;
+    border-radius: 0.5rem;
+    background-color: #282828;
     cursor: pointer;
-    margin: 3vh auto 0; 
-    margin-bottom: 1rem; 
-    font-size: 24px; 
+    margin: 3vh auto 0;
+    margin-bottom: 1rem;
+    font-size: 24px;
 
     @media (max-width: 1024px) {
       max-width: 18rem;
@@ -190,66 +189,65 @@
     @media (max-width: 570px) {
       max-width: 14rem;
       max-height: 2.5rem;
-      
     }
 
     &:hover {
-      opacity: 0.8; 
+      opacity: 0.8;
     }
   }
 
   .leave-feedback {
     border: none;
-    margin-top: 1rem; 
-    font-size: 24px; 
+    margin-top: 1rem;
+    font-size: 24px;
     font-weight: 700;
     @include goldText("../../images/gold.png");
 
     @media (max-width: 1024px) {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
     }
 
     @media (max-width: 570px) {
-      font-size: 1.3rem; 
+      font-size: 1.3rem;
       margin-top: 0.5rem;
     }
   }
 
   .product-container {
-    height: 2.625rem; 
-    min-width: 14.5rem; 
+    height: 2.625rem;
+    min-width: 14.5rem;
     background-color: #0f1012;
     margin-left: 0.3125rem;
-    border-radius: 0.5rem; 
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
     @media (max-width: 1024px) {
-      max-height: 2rem; 
-      min-width: 12rem;   
+      max-height: 2rem;
+      min-width: 12rem;
     }
 
     @media (max-width: 570px) {
-      max-height: 1.5rem; 
-      min-width: 10rem;   
+      max-height: 1.5rem;
+      min-width: 10rem;
     }
   }
 }
 
 .left {
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .right {
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
 @media (max-width: 570px) {
   .arrow {
     img {
-      width: 10px; 
+      width: 10px;
     }
   }
 }
