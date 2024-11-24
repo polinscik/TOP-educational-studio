@@ -1,0 +1,120 @@
+@import "../../style/mixins.scss";
+
+.telegram-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10vh 0 0;
+  max-width: 100%;
+  height: fit-content;
+  padding-bottom: 5vh; 
+  font-family: "Comfortaa";
+  padding: 1.25rem; 
+}
+
+.gray-rectangle {
+  width: 72.625rem; 
+  height: 31.875rem; 
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  align-items: center;
+  margin: 1.25rem; 
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+
+.iphone {
+  width: 37.063rem; 
+  height: auto;
+  margin-right: 1.25rem; 
+}
+
+.text-block {
+  color: #F6F1DE; 
+  font-family: "Comfortaa";
+
+  .text-1, .text-2, .text-3 {
+      margin-bottom: 1.875rem; 
+  }
+  .text-1 {
+    font-size: 1.5rem; 
+  }
+
+  .text-2 {
+      @include goldText("../../images/gold.png");
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2.3rem; 
+  }
+
+  .text-3 {
+      font-size: 1.25rem; 
+  }
+}
+
+.subscribe__button {
+  width: 15.125rem; 
+  height: 3.5625rem; 
+  border-radius: 0.5rem;
+  background-color: #0F1012;
+  cursor: pointer;
+  margin: 0.625rem 0 0; 
+  font-size: 1.5rem; 
+  display: flex; 
+  align-items: center;
+
+  @media (max-width: 1024px) {
+      max-width: 18rem;
+      max-height: 3rem; 
+  }
+
+  @media (max-width: 570px) {
+      max-width: 14rem;
+      max-height: 2.5rem; 
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+
+  .subscribe__btn {
+    @include goldText("../../images/gold.png");
+    font-size: 1.5rem;
+    border: none;
+    width: 15.125rem;
+    height: 3.5625rem; 
+    text-align: center;
+    font-weight: 700;
+    font-family: "Comfortaa";
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+        font-size: 1.5rem; 
+    }
+
+    @media (max-width: 570px) {
+        font-size: 1.3rem; 
+        margin-top: 0.3125rem; 
+    }
+  }
+}
