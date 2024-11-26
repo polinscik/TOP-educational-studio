@@ -1,120 +1,85 @@
-@import "../../style/mixins.scss";
+@import '../../style/mixins.scss';
 
 .telegram-container {
+  box-sizing: border-box;
+  max-width: 1160px;
+  margin: 60px auto;
+  font-family: 'Comfortaa';
+
+  @media (max-width: 1200px) {
+    margin-inline: 20px;
+  }
+}
+
+.telegram-content {
+  box-sizing: border-box;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  background: url('src/images/stars.svg') no-repeat center center / cover, #282828;
+  border-radius: 5px;
+}
+
+.telegram-image {
+  width: 45%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.telegram-text-block {
+  width: 50%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 10vh 0 0;
-  max-width: 100%;
-  height: fit-content;
-  padding-bottom: 5vh; 
-  font-family: "Comfortaa";
-  padding: 1.25rem; 
-}
+  color: #f6f1de;
+  font-family: 'Comfortaa';
 
-.gray-rectangle {
-  width: 72.625rem; 
-  height: 31.875rem; 
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.rectangle {
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  position: absolute;
-}
-
-.stars {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.content {
-  align-items: center;
-  margin: 1.25rem; 
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 1;
-}
-
-.iphone {
-  width: 37.063rem; 
-  height: auto;
-  margin-right: 1.25rem; 
-}
-
-.text-block {
-  color: #F6F1DE; 
-  font-family: "Comfortaa";
-
-  .text-1, .text-2, .text-3 {
-      margin-bottom: 1.875rem; 
+  .text-1,
+  .text-2,
+  .text-3 {
+    margin-bottom: 1.875rem;
   }
   .text-1 {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .text-2 {
-      @include goldText("../../images/gold.png");
-      font-weight: bold;
-      font-size: 2rem;
-      line-height: 2.3rem; 
+    @include goldText('../../images/gold.png');
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.3rem;
   }
 
   .text-3 {
-      font-size: 1.25rem; 
+    margin-bottom: 45px;
+    font-size: 1.25rem;
   }
 }
 
-.subscribe__button {
-  width: 15.125rem; 
-  height: 3.5625rem; 
+.subscribe-btn {
+  padding: 15px 30px;
+  font-family: 'Comfortaa';
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
   border-radius: 0.5rem;
-  background-color: #0F1012;
+  background-color: #0f1012;
   cursor: pointer;
-  margin: 0.625rem 0 0; 
-  font-size: 1.5rem; 
-  display: flex; 
-  align-items: center;
+
+  span {
+    @include goldText('../../images/gold.png');
+  }
 
   @media (max-width: 1024px) {
-      max-width: 18rem;
-      max-height: 3rem; 
+    font-size: 1.5rem;
   }
 
   @media (max-width: 570px) {
-      max-width: 14rem;
-      max-height: 2.5rem; 
-  }
-
-  &:hover {
-    background-color: #000;
-  }
-
-  .subscribe__btn {
-    @include goldText("../../images/gold.png");
-    font-size: 1.5rem;
-    border: none;
-    width: 15.125rem;
-    height: 3.5625rem; 
-    text-align: center;
-    font-weight: 700;
-    font-family: "Comfortaa";
-    cursor: pointer;
-
-    @media (max-width: 1024px) {
-        font-size: 1.5rem; 
-    }
-
-    @media (max-width: 570px) {
-        font-size: 1.3rem; 
-        margin-top: 0.3125rem; 
-    }
+    font-size: 1.3rem;
   }
 }
