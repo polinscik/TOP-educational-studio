@@ -19,10 +19,24 @@
   column-gap: 10px;
   background: url('src/images/stars.svg') no-repeat center center / cover, #282828;
   border-radius: 5px;
+  @media (max-width: 570px) {
+    flex-direction: column;
+    .telegram-text-block {
+      order: 1; 
+    }
+
+    .telegram-image {
+      order: 2; 
+    }
+  }
 }
 
 .telegram-image {
   width: 45%;
+  @media (max-width: 570px) {
+    width: 100%;
+
+  }
 
   img {
     width: 100%;
@@ -38,6 +52,10 @@
   flex-direction: column;
   color: #f6f1de;
   font-family: 'Comfortaa';
+  @media (max-width: 570px) {
+    width: 100%;
+    
+  }
 
   .text-1,
   .text-2,
