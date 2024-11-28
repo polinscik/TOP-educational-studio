@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ReviewSlider.scss";
 import rightArrow from "../../images/right-arrow.png";
 import leftArrow from "../../images/left-arrow.png";
+import FormForReview from "../FormForReview/FormForReview";
 
 const testimonials = [
   {
@@ -67,6 +68,7 @@ const TestimonialsSlider = () => {
   const [expandedCard, setExpandedCard] = useState(null);
   const [itemsPerPage, setItemsPerPage] = useState(4);
   const [maxLength, setMaxLength] = useState(570);
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -160,8 +162,11 @@ const TestimonialsSlider = () => {
         </button>
       </div>
       <div className="leave-feedback-button">
-        <button className="leave-feedback">Оставить отзыв</button>
+        <button className="leave-feedback" onClick={() => setShowForm(!showForm)}>
+          Оставить отзыв
+        </button>
       </div>
+      {showForm && <FormForReview />} {}
     </div>
   );
 };
