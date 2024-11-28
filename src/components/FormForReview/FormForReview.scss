@@ -1,7 +1,7 @@
 @import '../../style/mixins.scss';
 
 .section-form-review {
-    position: fixed; // Изменено на fixed чтобы занимать всю высоту и ширину окна
+    position: fixed; 
     top: 0;
     left: 0;
     right: 0;
@@ -17,12 +17,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(5px); // Эффект размытия фона
-  }
+    backdrop-filter: blur(5px); 
+}
 
 .form-review {
     position: relative;
-    z-index: 1; // Чтобы форма была над фоном
+    z-index: 1; 
     max-width: 460px;
     padding: 30px;
     display: flex;
@@ -36,10 +36,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.5rem; // Увеличьте размер, если нужно
-    color: #f6f1de; // Цвет текста
-    cursor: pointer; // Указатель при наведении
-    background: transparent; // Прозрачный фон
+    font-size: 1.5rem; 
+    color: #f6f1de;
+    cursor: pointer; 
+    background: transparent;
 }
 
     .form_review__title {
@@ -57,10 +57,10 @@
     font-size: 1rem;
     font-weight: 500;
     color: #f6f1de;
-  }
+}
 
-  .form_review__input {
-    height: 38px; // для одинакового отображения селекта в разных браузерах
+.form_review__input {
+    height: 38px;
     padding: 10px 15px;
     background-color: #f6f1de;
 
@@ -74,33 +74,30 @@
 
     &:-webkit-autofill,
     &:autofill {
-      box-shadow: 0 0 0 30px #f6f1de inset !important;
+    box-shadow: 0 0 0 30px #f6f1de inset !important;
     }
 
     &::placeholder {
-      color: rgba(15, 16, 18, 0.6);
+    color: rgba(15, 16, 18, 0.6);
     }
 
     &:-moz-placeholder,
     &::-moz-placeholder {
-      color: rgba(15, 16, 18);
+    color: rgba(15, 16, 18);
     }
-  }
+}
 
-  .select {
+.select {
     color: rgba(15, 16, 18, 0.6);
-    // -moz-appearance: none;
-    // -webkit-appearance: none;
-    // appearance: none;
-  }
+}
 
-  .textarea {
+    .textarea {
     height: 68px;
     resize: none;
-  }
+    }
 
-  &__submit-btn,
-  &__submit-btn_gold {
+    &__submit-btn,
+    &__submit-btn_gold {
     width: 100%;
     margin-top: 5px;
     padding: 12px;
