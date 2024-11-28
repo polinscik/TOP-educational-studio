@@ -6,6 +6,8 @@ import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards.jsx";
 import CourseCards from "../CourseCards/CourseCards";
 import Form from "../Form/Form.jsx";
+import Telegram from "../Telegram/Telegram.jsx";
+import OurContacts from "../OurContacts/OurContacts.jsx";
 
 export default function MainPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,6 +31,8 @@ export default function MainPage() {
       <CourseCards></CourseCards>
       <TeachersCards />
       <ReviewSlider />
+      <Telegram />
+      <OurContacts />
     </div>
   );
 }
