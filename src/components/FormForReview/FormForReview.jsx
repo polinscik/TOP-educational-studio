@@ -111,7 +111,7 @@ export default function FormForReview() {
                     </label>
                 </div>
 
-                {(errors.name || errors.email || errors.mobileNumber || errors.course || errors.format || errors.personalDataTerms) && <p className="error-message">Заполните все необходимые поля</p>}
+                {(errors.name || errors.email || errors.mobileNumber || errors.personalDataTerms) && <p className="error-message">Заполните все необходимые поля</p>}
 
                 {isSubmitSuccessful && !isSuccess && (
                     <p className="submit-error-message">Ошибка при отправке формы</p>
