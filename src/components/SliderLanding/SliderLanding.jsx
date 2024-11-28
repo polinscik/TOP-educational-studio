@@ -74,7 +74,7 @@ export default function SliderLanding() {
 
   return (
     <div className="slider-landing">
-      {windowWidth >= 1200 && <Form />}
+      {windowWidth > 1200 && <Form />}
       <Slider {...settings} className="slider-landing_arrow-style">
         <div className="slider-landing__bg-container">
           <div

@@ -6,6 +6,8 @@ import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards.jsx";
 import CourseCards from "../CourseCards/CourseCards";
 import Form from "../Form/Form.jsx";
+import Telegram from "../Telegram/Telegram.jsx";
+import OurContacts from "../OurContacts/OurContacts.jsx";
 import AboutUs from "../AboutUs/AboutUs.jsx";
 
 export default function MainPage() {
@@ -26,11 +28,13 @@ export default function MainPage() {
   return (
     <div style={{backgroundColor: "#0f1012"}}>
       <SliderLanding></SliderLanding>
-      {windowWidth < 1200 && <Form />}
+      {windowWidth <= 1200 && <Form />}
       <CourseCards></CourseCards>
       <AboutUs></AboutUs>
       <TeachersCards />
       <ReviewSlider />
+      <Telegram />
+      <OurContacts />
     </div>
   );
 }
