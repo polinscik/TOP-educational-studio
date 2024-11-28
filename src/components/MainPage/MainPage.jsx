@@ -6,6 +6,7 @@ import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards.jsx";
 import CourseCards from "../CourseCards/CourseCards";
 import Form from "../Form/Form.jsx";
+import AboutUs from "../AboutUs/AboutUs.jsx";
 
 export default function MainPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -27,6 +28,7 @@ export default function MainPage() {
       <SliderLanding></SliderLanding>
       {windowWidth < 1200 && <Form />}
       <CourseCards></CourseCards>
+      <AboutUs></AboutUs>
       <TeachersCards />
       <ReviewSlider />
     </div>
