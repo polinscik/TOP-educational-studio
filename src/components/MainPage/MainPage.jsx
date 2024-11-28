@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import "./MainPage.scss";
-import { Fragment } from "react";
+import {Fragment} from "react";
 import SliderLanding from "../SliderLanding/SliderLanding";
 import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards.jsx";
@@ -8,6 +8,7 @@ import CourseCards from "../CourseCards/CourseCards";
 import Form from "../Form/Form.jsx";
 import Telegram from "../Telegram/Telegram.jsx";
 import OurContacts from "../OurContacts/OurContacts.jsx";
+import AboutUs from "../AboutUs/AboutUs.jsx";
 
 export default function MainPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -25,10 +26,11 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "#0f1012" }}>
+    <div style={{backgroundColor: "#0f1012"}}>
       <SliderLanding></SliderLanding>
       {windowWidth <= 1200 && <Form />}
       <CourseCards></CourseCards>
+      <AboutUs></AboutUs>
       <TeachersCards />
       <ReviewSlider />
       <Telegram />

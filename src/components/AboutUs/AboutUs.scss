@@ -1,0 +1,141 @@
+@import "../../style/mixins.scss";
+.au {
+  margin-top: 4vh;
+  min-height: 100vh;
+  background-color: #0f1012;
+}
+.au__container {
+  margin: 0 4vw;
+  border-radius: 5px;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+  @media (max-width: 1023px) {
+    padding: 4vh 6vw;
+    margin: 0 6vw;
+  }
+}
+.au__title {
+  @include goldText("../../images/gold.png");
+  font-family: "Rounds Black";
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2em;
+  margin-bottom: 4vh;
+}
+.au__intro {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "img1 text1 text1"
+    "img1 text15 text15"
+    "img1 img2 text2";
+  column-gap: 3vw;
+  row-gap: 3vh;
+  padding-bottom: 4vh;
+  @media (max-width: 1023px) {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "img1 text1"
+      "img1 img2"
+      "text15 text15"
+      "text2 text2";
+  }
+}
+.au__bonuses {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "text1 img1 img2"
+    "text2 img1 img2"
+    "text2 img1 text3";
+  column-gap: 3vw;
+  row-gap: 3vh;
+  padding-bottom: 3vh;
+  @media (max-width: 1023px) {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas:
+      "img2 img1"
+      "text1 img1"
+      "text2 text2"
+      "text3 text3";
+  }
+}
+.au__outro {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "text1 img1 img2";
+  column-gap: 3vw;
+  row-gap: 3vh;
+  padding-bottom: 3vh;
+  justify-items: center;
+  @media (max-width: 1023px) {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "img2 text3"
+      "img2 text1"
+      "img1 img1";
+  }
+}
+.au__bonuses-text {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+.au__outro-text {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+.au img {
+  max-width: 100%;
+}
+.au__text {
+  font-family: "Comfortaa";
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.1em;
+  color: #fff;
+}
+.au__text_large {
+  font-size: 1.5rem;
+}
+.au__text_gold {
+  @include goldText("../../images/gold.png");
+}
+.au__list {
+  list-style-image: url("../../images/star-list-style-img.png");
+  padding-left: 1vw;
+  @media (max-width: 1023px) {
+    padding-left: 3vw;
+  }
+}
+.au__closing-text {
+  text-align: center;
+}
+.au__img1 {
+  grid-area: img1;
+}
+.au__img2 {
+  grid-area: img2;
+}
+.au__text1 {
+  grid-area: text1;
+}
+.au__text15 {
+  grid-area: text15;
+}
+.au__text2 {
+  grid-area: text2;
+}
+.au__text3 {
+  grid-area: text3;
+}
