@@ -38,7 +38,7 @@ export default function Form() {
     };
 
     return (
-        <>
+        <section className="section-form">
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 <input
                     type="hidden"
@@ -125,6 +125,6 @@ export default function Form() {
             </form>
 
 
-        </>
+        </section>
     );
 }

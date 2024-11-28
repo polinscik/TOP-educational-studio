@@ -1,6 +1,6 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "./MainPage.scss";
-import {Fragment} from "react";
+import { Fragment } from "react";
 import SliderLanding from "../SliderLanding/SliderLanding";
 import ReviewSlider from "../ReviewSlider/ReviewSlider";
 import TeachersCards from "../TeachersCards/TeachersCards.jsx";
@@ -25,9 +25,9 @@ export default function MainPage() {
   }, []);
 
   return (
-    <div style={{backgroundColor: "#0f1012"}}>
+    <div style={{ backgroundColor: "#0f1012" }}>
       <SliderLanding></SliderLanding>
-      {windowWidth < 1200 && <Form />}
+      {windowWidth <= 1200 && <Form />}
       <CourseCards></CourseCards>
       <TeachersCards />
       <ReviewSlider />
