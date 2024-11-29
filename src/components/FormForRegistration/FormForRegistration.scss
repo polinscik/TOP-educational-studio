@@ -1,6 +1,6 @@
 @import '../../style/mixins.scss';
 
-.section-form-review {
+.section-form-registration {
     position: fixed; 
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.7);
+  
 }
 .form-background {
     position: absolute;
@@ -20,7 +20,7 @@
     backdrop-filter: blur(5px); 
 }
 
-.form-review {
+.form-registration {
     position: relative;
     z-index: 1; 
     max-width: 460px;
@@ -31,6 +31,7 @@
     text-align: center;
     background-color: #0f1012;
     border-radius: 5px;
+    margin-top: 130px;
 
 .close-icon {
     position: absolute;
@@ -42,7 +43,7 @@
     background: transparent;
 }
 
-    .form_review__title {
+    .form_registration__title {
     margin-bottom: 5px;
 
     @include goldText('../../images/gold.png');
@@ -50,16 +51,15 @@
     font-weight: 700;
   }
 
-  .form_review__subtitle {
+  .form_registration__subtitle {
     margin-bottom: 20px;
     padding-inline: 37px;
-
     font-size: 1rem;
     font-weight: 500;
     color: #f6f1de;
 }
 
-.form_review__input {
+.form_registration__input {
     height: 38px;
     padding: 10px 15px;
     background-color: #f6f1de;
@@ -140,7 +140,6 @@
 
 .personal-data-terms {
   align-self: flex-start;
-
   display: flex;
   align-items: center;
   column-gap: 15px;
@@ -173,36 +172,36 @@
 }
 
 @media (max-width: 1200px) {
-  .section-form-review {
+  .section-form-registration {
     width: 100%;
-    position: static;
+    position: absolute;
     transform: none;
-    padding: 100px 20px;
   }
 
-  .form-review {
+  .form-registration {
     margin: 0 auto;
     border: 1px solid #af9460;
   }
 }
 
 @media (max-width: 570px) {
-  .form-review {
+  .form-registration {
     max-width: 340px;
     padding-inline: 20px;
+    margin-top: 0;
 
-    &__title {
+    .form_registration__title {
       font-size: 1.25rem;
     }
 
-    &__subtitle,
-    &__input,
+    .form_registration__subtitle,
+    .form_registration__input,
     &__submit-btn,
     &__submit-btn_gold {
       font-size: 0.875rem;
     }
 
-    &__subtitle {
+    .form_registration__subtitle {
       padding-inline: 20px;
     }
   }
@@ -222,7 +221,7 @@
 }
 
 @media (max-width: 380px) {
-  .section-form-review {
+  .section-form-registration {
     padding-block: 30px;
   }
 }

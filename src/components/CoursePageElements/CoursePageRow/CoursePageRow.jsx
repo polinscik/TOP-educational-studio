@@ -1,6 +1,7 @@
 import "./CoursePageRow.scss";
 import {Fragment, useState} from "react";
 import Button from "../../Button/Button";
+import FormForRegistration from "../../FormForRegistration/FormForRegistration";
 
 function CoursePageRow({
   priceArray,
@@ -11,6 +12,7 @@ function CoursePageRow({
   rowAdditionalDesc,
 }) {
   const [expanded, setExpanded] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   return (
     <Fragment>
       <div className="course-page__row">
@@ -47,10 +49,11 @@ function CoursePageRow({
               </p>
             </div>
           ))}
-          <Button classname="btn btn_gold course-page__price-btn">
+          <Button classname="btn btn_gold course-page__price-btn" onClick={() => setShowForm(!showForm)}>
             Записаться
           </Button>
         </div>
+        {showForm && <FormForRegistration />} {}
       </div>
       <div className="course-page__divider"></div>
     </Fragment>

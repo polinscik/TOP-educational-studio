@@ -66,7 +66,7 @@ export default function Form() {
                     className={`form__input ${errors.name ? "border-red" : null}`}
                     type="text"
                     placeholder="Имя*"
-                    {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[A-Za-z]+$/i })}
+                    {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[А-Яа-яA-Za-z\s]+$/i })}
                 />
                 <input
                     className={`form__input ${errors.email ? "border-red" : null}`}
