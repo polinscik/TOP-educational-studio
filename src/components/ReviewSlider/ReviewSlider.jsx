@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./ReviewSlider.scss";
 import rightArrow from "../../images/right-arrow.png";
 import leftArrow from "../../images/left-arrow.png";
@@ -110,6 +110,16 @@ const TestimonialsSlider = () => {
     (currentIndex + 1) * itemsPerPage
   );
 
+  const handleOpen = useCallback(() => {
+    setShowForm(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setShowForm(false);
+    document.body.style.overflow = '';
+  }, []);
+
   return (
     <div className="testimonials-slider">
       <h2 className="testimonials-heading" id="about-title">
@@ -126,9 +136,8 @@ const TestimonialsSlider = () => {
 
             return (
               <div
-                className={`testimonial-card ${
-                  isUpperRow ? "upper" : "lower"
-                } ${isExpanded ? "expanded" : ""}`}
+                className={`testimonial-card ${isUpperRow ? "upper" : "lower"
+                  } ${isExpanded ? "expanded" : ""}`}
                 key={testimonial.id}
               >
                 <p className="quote">
@@ -162,11 +171,11 @@ const TestimonialsSlider = () => {
         </button>
       </div>
       <div className="leave-feedback-button">
-        <button className="leave-feedback" onClick={() => setShowForm(!showForm)}>
+        <button className="leave-feedback" onClick={handleOpen}>
           Оставить отзыв
         </button>
       </div>
-      {showForm && <FormForReview />} {}
+      {showForm && <FormForReview onClickClose={handleClose} />}
     </div>
   );
 };
