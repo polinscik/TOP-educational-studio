@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import "./Form.scss";
+import "./FormForCourse.scss";
 
-export default function Form() {
+export default function Form({ onClickClose }) {
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
     const [isSuccess, setIsSuccess] = useState(false);
     const [Message, setMessage] = useState("");
@@ -38,16 +38,18 @@ export default function Form() {
     };
 
     return (
-        <section className="section-form">
-            <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <section className="section-form-course">
+            <div className="form-course-background" onClick={onClickClose}></div>
+            <form className="form form-course" onSubmit={handleSubmit(onSubmit)}>
+                <div className="close-icon" onClick={onClickClose}>&times;</div>
                 <input
                     type="hidden"
-                    value="7ecbe64b-a70e-4402-9677-b2142c2ad49e" // value="API_KEY"
+                    value="7ecbe64b-a70e-4402-9677-b2142c2ad49e"  // value="API_KEY"
                     {...register("access_key")}
                 />
                 <input
                     type="hidden"
-                    value="Новая заявка с сайта"
+                    value="Новая запись на урок с сайта"
                     {...register("subject")}
 
                 />
@@ -59,7 +61,7 @@ export default function Form() {
                     {...register("botcheck")}
                 />
 
-                <h4 className="form__title">Записаться на&nbsp;консультацию</h4>
+                <h4 className="form__title">Записаться на&nbsp;урок</h4>
                 <p className="form__subtitle">Заполните форму, и мы свяжемся с&nbsp;Вами в ближайшее время</p>
                 <input
                     className={`form__input ${errors.name ? "border-red" : null}`}
@@ -122,8 +124,6 @@ export default function Form() {
                     }
                 </button>
             </form>
-
-
         </section>
     );
 }

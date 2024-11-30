@@ -3,11 +3,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./FormForReview.scss";
 
-export default function FormForReview() {
+export default function FormForReview({ onClickClose }) {
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
     const [isSuccess, setIsSuccess] = useState(false);
     const [Message, setMessage] = useState("");
-    const [isFormVisible, setIsFormVisible] = useState(true); 
 
     const onSubmit = async (data, e) => {
         console.log(data);
@@ -38,22 +37,14 @@ export default function FormForReview() {
             });
     };
 
-    const closeForm = () => {
-        setIsFormVisible(false);
-    };
-
-    if (!isFormVisible) {
-        return null; 
-    }
-
     return (
-<section className="section-form-review">
-            <div className="form-background" onClick={closeForm}></div>
+        <section className="section-form-review">
+            <div className="form-background" onClick={onClickClose}></div>
             <form className="form-review" onSubmit={handleSubmit(onSubmit)}>
-                <div className="close-icon" onClick={closeForm}>&times;</div>
+                <div className="close-icon" onClick={onClickClose}>&times;</div>
                 <input
                     type="hidden"
-                    value="75486066-59bd-4cb2-bfb8-4a3e90dde730"
+                    value="7ecbe64b-a70e-4402-9677-b2142c2ad49e" // value="API_KEY"
                     {...register("access_key")}
                 />
                 <input
@@ -69,18 +60,19 @@ export default function FormForReview() {
                     {...register("botcheck")}
                 />
 
-                <h4 className="form_review__title">Оставить &nbsp;отзыв</h4>
-                <p className="form_review__subtitle">Заполните форму&nbsp;для отзыва</p>
+                <h4 className="form_review__title">Оставить отзыв</h4>
+                <p className="form_review__subtitle">Заполните форму для&nbsp;отзыва</p>
                 <input
                     className={`form_review__input ${errors.name ? "border-red" : null}`}
                     type="text"
                     placeholder="Имя*"
-                    {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: <input
-                        className={`form_review__input ${errors.name ? "border-red" : null}`}
-                        type="text"
-                        placeholder="Имя*"
-                        {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[А-Яа-яA-Za-z\s]+$/i })}
-                    />
+                    {...register("name", {
+                        required: true, minLength: 3, maxLength: 30, pattern: <input
+                            className={`form_review__input ${errors.name ? "border-red" : null}`}
+                            type="text"
+                            placeholder="Имя*"
+                            {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[А-Яа-яA-Za-z\s]+$/i })}
+                        />
                     })}
                 />
                 <input

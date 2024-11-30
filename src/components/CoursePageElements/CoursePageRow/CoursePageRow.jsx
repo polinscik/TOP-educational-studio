@@ -1,6 +1,7 @@
 import "./CoursePageRow.scss";
-import {Fragment, useState} from "react";
+import { Fragment, useState, useCallback } from "react";
 import Button from "../../Button/Button";
+import FormForCourse from "../../FormForCourse/FormForCourse";
 
 function CoursePageRow({
   priceArray,
@@ -11,6 +12,18 @@ function CoursePageRow({
   rowAdditionalDesc,
 }) {
   const [expanded, setExpanded] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+
+  const handleOpen = useCallback(() => {
+    setShowForm(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setShowForm(false);
+    document.body.style.overflow = '';
+  }, []);
+
   return (
     <Fragment>
       <div className="course-page__row">
@@ -47,9 +60,10 @@ function CoursePageRow({
               </p>
             </div>
           ))}
-          <Button classname="btn btn_gold course-page__price-btn">
+          <Button classname="btn btn_gold course-page__price-btn" onClick={handleOpen}>
             Записаться
           </Button>
+          {showForm && <FormForCourse onClickClose={handleClose} />}
         </div>
       </div>
       <div className="course-page__divider"></div>
