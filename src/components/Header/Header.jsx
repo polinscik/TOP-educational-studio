@@ -70,7 +70,7 @@ export default function Header() {
             <div className="telegram-icon">
               <img src={TgIcon} alt="Телеграм" />
             </div>
-            <p>+77011234567</p>
+            <p>+79027617966</p>
           </a>
         </div>
         <button className="header-burger-btn" onClick={handleBurgerMenuBtn}>

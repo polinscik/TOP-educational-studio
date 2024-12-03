@@ -1,5 +1,5 @@
 import "./CoursePageExams.scss";
-import {Fragment} from "react";
+import { Fragment } from "react";
 import CoursePageTitle from "../../CoursePageElements/CoursePageTitle/CoursePageTitle";
 import CoursePageRow from "../../CoursePageElements/CoursePageRow/CoursePageRow";
 
@@ -11,13 +11,13 @@ function ExamsRowMainDesc() {
         сдавать английский на ОГЭ и ЕГЭ! Экзамен непростой, и готовиться к нему
         нужно максимально осознанно и серьёзно.
       </p>
-      <p style={{marginTop: "2vh"}}>На курсе мы:</p>
+      <p style={{ marginTop: "2vh" }}>На курсе мы:</p>
       <ul>
         <li>- повторяем базовые лексико-грамматические темы;</li>
         <li>- очень много тренируемся на официально принятых материалах;</li>
         <li>- "прокачиваем" навыки говорения и письма на английском.</li>
       </ul>
-      <p style={{marginTop: "2vh"}}>
+      <p style={{ marginTop: "2vh" }}>
         Ученики, вовремя пришедшие к нам учиться, готовы к экзаменам  ментально
         и морально!
       </p>
@@ -34,14 +34,14 @@ function GraduateRowMainDesc() {
         Не переживай! Мы поможем! С нами ты вспомнишь всё, что забыл, и узнаешь
         всё, чего не знал!
       </p>
-      <p style={{marginTop: "2vh"}}>На курсе мы:</p>
+      <p style={{ marginTop: "2vh" }}>На курсе мы:</p>
       <ul>
         <li>- повторяем базовые грамматические темы;</li>
         <li>- проходим пропущенный в школе материал;</li>
         <li>- очень много тренируемся на официально принятых материалах;</li>
         <li>- "прокачиваем" навыки по написанию изложений и сочинений.</li>
       </ul>
-       <p style={{marginTop: "2vh"}}>Наши ребята всегда готовы!</p>
+       <p style={{ marginTop: "2vh" }}>Наши ребята всегда готовы!</p>
     </Fragment>
   );
 }
@@ -57,8 +57,8 @@ const PAGE_DATA = {
       rowMainDesc: <ExamsRowMainDesc></ExamsRowMainDesc>,
       rowAdditionalDesc: "",
       priceArray: [
-        {priceName: "Индивидуальный урок", price: "00"},
-        {priceName: "Урок в группе", price: "00"},
+        { priceName: "Индивидуальный урок", price: "00" },
+        { priceName: "Урок в группе", price: "00" },
       ],
     },
     {
@@ -69,8 +69,8 @@ const PAGE_DATA = {
       rowMainDesc: <GraduateRowMainDesc></GraduateRowMainDesc>,
       rowAdditionalDesc: "",
       priceArray: [
-        {priceName: "Индивидуальный урок", price: "00"},
-        {priceName: "Урок в группе", price: "00"},
+        { priceName: "Индивидуальный урок", price: "00" },
+        { priceName: "Урок в группе", price: "00" },
       ],
     },
   ],
@@ -84,7 +84,8 @@ function CoursePageExams() {
         <CoursePageRow
           priceArray={row.priceArray}
           {...row}
-          key={row.rowId}></CoursePageRow>
+          key={row.rowId}
+        ></CoursePageRow>
       ))}
     </section>
   );

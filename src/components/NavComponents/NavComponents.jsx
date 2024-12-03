@@ -63,10 +63,10 @@ export function OnlineTests() {
   const list = [
     {
       name: "Английский",
-      href: "/",
+      href: "/english-test",
     },
-    { name: "Русский", href: "/" },
-    { name: "Тренажёр ЕГЭ/ОГЭ", href: "/" },
+    { name: "Русский", href: "/russian-test" },
+    { name: "Тренажёр ЕГЭ/ОГЭ", href: "/exams-test" },
   ];
 
   return (
