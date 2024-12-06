@@ -5,7 +5,7 @@ function ExamsTestPage() {
   return (
     <div className="tests-pages-container">
       <Iframe
-        src="https://wordwall.net/ru/embed/42facadde00a40aeb07e5456c9040d64?themeId=41&templateId=5&fontStackId=0"
+        src="https://wordwall.net/ru/embed/8e1376bd667f494fa096e45a1c4e15b1?themeId=55&templateId=11&fontStackId=0"
         className="tests-pages-iframe"
       ></Iframe>
     </div>
