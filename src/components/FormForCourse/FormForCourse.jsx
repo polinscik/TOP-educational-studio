@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import "./FormForCourse.scss";
 
-export default function Form({ onClickClose }) {
+export default function FormForCourse({ onClickClose, rowTitle }) {
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
     const [isSuccess, setIsSuccess] = useState(false);
     const [Message, setMessage] = useState("");
@@ -67,7 +67,7 @@ export default function Form({ onClickClose }) {
                     className={`form__input ${errors.name ? "border-red" : null}`}
                     type="text"
                     placeholder="Имя*"
-                    {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[A-Za-z]+$/i })}
+                    {...register("name", { required: true, minLength: 3, maxLength: 30, pattern: /^[А-Яа-яA-Za-z\s]+$/i })}
                 />
                 <input
                     className={`form__input ${errors.email ? "border-red" : null}`}
@@ -84,9 +84,7 @@ export default function Form({ onClickClose }) {
 
                 <select className={`form__input select ${errors.course ? "border-red" : null}`}
                     {...register("course", { required: true })}>
-                    <option value="">Выбор курса*</option>
-                    <option value="Индивидуальный Junior">Индивидуальный Junior</option>
-                    <option value="Групповой Junior">Групповой Junior</option>
+                    <option value={rowTitle}>Курс {rowTitle}</option>
                 </select>
 
                 <select className={`form__input select ${errors.format ? "border-red" : null}`}

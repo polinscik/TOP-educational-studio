@@ -63,7 +63,7 @@ function CoursePageRow({
           <Button classname="btn btn_gold course-page__price-btn" onClick={handleOpen}>
             Записаться
           </Button>
-          {showForm && <FormForCourse onClickClose={handleClose} />}
+          {showForm && <FormForCourse rowTitle={rowTitle} onClickClose={handleClose} />}
         </div>
       </div>
       <div className="course-page__divider"></div>
