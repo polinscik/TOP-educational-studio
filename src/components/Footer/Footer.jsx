@@ -4,10 +4,16 @@ import TOPLogo from "../../images/footer-top-logo.svg";
 import MountainsLogo from "../../images/footer-mountains-logo.svg";
 
 function Footer() {
+  const handleButtonClick = () => {
+    window.open("https://docs.google.com/document/d/ВАШ_ДОКУМЕНТ_ID", "_blank");
+  };
+
   return (
     <div className="footer">
       <div className="footer__btn">
-        <Button classname="btn btn_footer">Правила обучения в студии</Button>
+        <Button classname="btn btn_footer" onClick={handleButtonClick}>
+          Правила обучения в студии
+        </Button>
       </div>
       <div className="footer__requisites requisites">
         <h3 className="requisites__title">РЕКВИЗИТЫ</h3>
