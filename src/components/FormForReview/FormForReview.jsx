@@ -93,6 +93,12 @@ export default function FormForReview({ onClickClose }) {
                     type="text"
                     placeholder="Предмет*" {...register("review")}
                 />
+                
+                <input
+                    className={`form_review__input`}
+                    type="text"
+                    placeholder="Род деятельности*" {...register("review")}
+                />
 
                 <textarea className="form_review__input textarea" placeholder="Отзыв" {...register("comment")} />
 
