@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import "./SliderLanding.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,7 +9,7 @@ import bgImg3 from "../../images/landing-slider-bg-3.png";
 import Form from "../Form/Form";
 
 function NextArrow(props) {
-  const { className, style, onClick } = props;
+  const {className, style, onClick} = props;
 
   return (
     <img
@@ -28,7 +28,7 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  const { className, style, onClick } = props;
+  const {className, style, onClick} = props;
 
   return (
     <img
@@ -42,6 +42,31 @@ function PrevArrow(props) {
         height: "auto",
       }}
       onClick={onClick}></img>
+  );
+}
+
+function SliderBtn() {
+  function handleClick() {
+    const elementArr = Array.from(
+      document.getElementsByClassName("courseCards")
+    );
+    if (elementArr.length) {
+      elementArr[0].scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }
+  return (
+    <div className="slider-landing_btn-group">
+      <button className="slider-landing_btn" onClick={handleClick}>
+        Узнать больше
+      </button>
+      <img
+        className="slider-landing_arrow"
+        src="src/images/landing-btn-arrow.png"
+        alt="стрелка вправо"
+      />
+    </div>
   );
 }
 export default function SliderLanding() {
@@ -65,10 +90,10 @@ export default function SliderLanding() {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -91,14 +116,7 @@ export default function SliderLanding() {
               <p className="slider-landing_text">
                 Выбирай курс, отправляй заявку и приступай к обучению!
               </p>
-              <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
-                <img
-                  className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
-                  alt="стрелка вправо"
-                />
-              </div>
+              <SliderBtn></SliderBtn>
             </div>
           </div>
         </div>
@@ -126,14 +144,7 @@ export default function SliderLanding() {
               <p className="slider-landing_text">
                 Наш авторский подход придётся по душе ученику с любым запросом!
               </p>
-              <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
-                <img
-                  className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
-                  alt="стрелка вправо"
-                />
-              </div>
+              <SliderBtn></SliderBtn>
             </div>
           </div>
         </div>
@@ -159,14 +170,7 @@ export default function SliderLanding() {
               <p className="slider-landing_text">
                 Студия «ТОП». Мы учим думать.
               </p>
-              <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
-                <img
-                  className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
-                  alt="стрелка вправо"
-                />
-              </div>
+              <SliderBtn></SliderBtn>
             </div>
           </div>
         </div>
