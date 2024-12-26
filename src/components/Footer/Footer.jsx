@@ -5,7 +5,7 @@ import MountainsLogo from "../../images/footer-mountains-logo.svg";
 
 function Footer() {
   const handleButtonClick = () => {
-    window.open("https://docs.google.com/document/d/ВАШ_ДОКУМЕНТ_ID", "_blank");
+    window.open("https://docs.google.com/document/d/1IE_521FNdx9HJkJYxWxNN6x-ww3-y4jp0VJw6L3H2Ek", "_blank");
   };
 
   return (
