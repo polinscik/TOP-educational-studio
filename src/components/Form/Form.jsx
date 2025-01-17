@@ -83,8 +83,12 @@ export default function Form() {
                 <select className={`form__input select ${errors.course ? "border-red" : null}`}
                     {...register("course", { required: true })}>
                     <option value="">Выбор курса*</option>
-                    <option value="Индивидуальный Junior">Индивидуальный Junior</option>
-                    <option value="Групповой Junior">Групповой Junior</option>
+                    <option value="Английский язык для школьников">Английский язык  для школьников</option>
+                    <option value="Русский язык для школьников">Русский язык для школьников</option>
+                    <option value="Подготовка к ОГЭ/ЕГЭ для школьников">Подготовка к ОГЭ/ЕГЭ для школьников</option>
+                    <option value="Английский язык для взрослых">Английский язык для взрослых</option>
+                    <option value="Русский язык для взрослых">Русский язык для взрослых</option>
+                    <option value="Музыкальные курсы">Музыкальные курсы</option>
                 </select>
 
                 <select className={`form__input select ${errors.format ? "border-red" : null}`}

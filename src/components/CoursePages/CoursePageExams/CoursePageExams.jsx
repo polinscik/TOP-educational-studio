@@ -57,8 +57,8 @@ const PAGE_DATA = {
       rowMainDesc: <ExamsRowMainDesc></ExamsRowMainDesc>,
       rowAdditionalDesc: "",
       priceArray: [
-        { priceName: "Индивидуальный урок", price: "00" },
-        { priceName: "Урок в группе", price: "00" },
+        { priceName: "Индивидуальный урок", price: "1800" },
+        { priceName: "Урок в группе", price: "900" },
       ],
     },
     {
@@ -69,8 +69,8 @@ const PAGE_DATA = {
       rowMainDesc: <GraduateRowMainDesc></GraduateRowMainDesc>,
       rowAdditionalDesc: "",
       priceArray: [
-        { priceName: "Индивидуальный урок", price: "00" },
-        { priceName: "Урок в группе", price: "00" },
+        { priceName: "Индивидуальный урок", price: "1500" },
+        { priceName: "Урок в группе", price: "800" },
       ],
     },
   ],
