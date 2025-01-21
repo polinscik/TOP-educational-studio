@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./SliderLanding.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,6 +44,7 @@ function PrevArrow(props) {
       onClick={onClick}></img>
   );
 }
+
 export default function SliderLanding() {
   const settings = {
     dots: false,
@@ -59,6 +60,7 @@ export default function SliderLanding() {
   };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const aboutUsRef = useRef(null); 
 
   useEffect(() => {
     const handleResize = () => {
@@ -71,6 +73,10 @@ export default function SliderLanding() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  const scrollToAboutUs = () => {
+    aboutUsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="slider-landing">
@@ -86,13 +92,13 @@ export default function SliderLanding() {
               <h1 className="slider-landing_title">Привет!</h1>
               <p className="slider-landing_text">
                 Мы одинаково круто обучаем английскому, русскому, саунд
-                дизайну,  аранжировке и работе в цифровых аудиостанциях!
+                дизайну,  аранжировке и работе в цифровых аудиостанциях!
               </p>
               <p className="slider-landing_text">
                 Выбирай курс, отправляй заявку и приступай к обучению!
               </p>
               <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
+                <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
                   src="src/images/landing-btn-arrow.png"
@@ -127,7 +133,7 @@ export default function SliderLanding() {
                 Наш авторский подход придётся по душе ученику с любым запросом!
               </p>
               <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
+              <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
                   src="src/images/landing-btn-arrow.png"
@@ -160,7 +166,7 @@ export default function SliderLanding() {
                 Студия «ТОП». Мы учим думать.
               </p>
               <div className="slider-landing_btn-group">
-                <button className="slider-landing_btn">Узнать больше</button>
+              <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
                   src="src/images/landing-btn-arrow.png"
@@ -171,6 +177,7 @@ export default function SliderLanding() {
           </div>
         </div>
       </Slider>
+      <div ref={aboutUsRef}></div>
     </div>
   );
 }
