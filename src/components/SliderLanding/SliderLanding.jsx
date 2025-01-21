@@ -6,6 +6,9 @@ import Slider from "react-slick";
 import bgImg1 from "../../images/landing-slider-bg-1.png";
 import bgImg2 from "../../images/landing-slider-bg-2.png";
 import bgImg3 from "../../images/landing-slider-bg-3.png";
+import landingBtnArrow from "../../images/landing-btn-arrow.png"; 
+import rightArrow from "../../images/right-arrow.png"; 
+import leftArrow from "../../images/left-arrow.png"; 
 import Form from "../Form/Form";
 
 function NextArrow(props) {
@@ -13,7 +16,7 @@ function NextArrow(props) {
 
   return (
     <img
-      src="src/images/right-arrow.png"
+      src={rightArrow} 
       className={className}
       style={{
         ...style,
@@ -32,7 +35,7 @@ function PrevArrow(props) {
 
   return (
     <img
-      src="src/images/left-arrow.png"
+      src={leftArrow} 
       className={className}
       style={{
         ...style,
@@ -60,7 +63,7 @@ export default function SliderLanding() {
   };
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const aboutUsRef = useRef(null); 
+  const aboutUsRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -86,7 +89,7 @@ export default function SliderLanding() {
           <div
             className="slider-landing__bg"
             style={{
-              backgroundImage: "url(" + bgImg1 + ")",
+              backgroundImage: `url(${bgImg1})`,
             }}>
             <div className="slider-landing_slide">
               <h1 className="slider-landing_title">Привет!</h1>
@@ -101,7 +104,7 @@ export default function SliderLanding() {
                 <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
+                  src={landingBtnArrow} 
                   alt="стрелка вправо"
                 />
               </div>
@@ -112,7 +115,7 @@ export default function SliderLanding() {
           <div
             className="slider-landing__bg"
             style={{
-              backgroundImage: "url(" + bgImg2 + ")",
+              backgroundImage: `url(${bgImg2})`,
               backgroundPositionX: "25%",
             }}>
             <div className="slider-landing_slide">
@@ -133,10 +136,10 @@ export default function SliderLanding() {
                 Наш авторский подход придётся по душе ученику с любым запросом!
               </p>
               <div className="slider-landing_btn-group">
-              <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
+                <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
+                  src={landingBtnArrow} 
                   alt="стрелка вправо"
                 />
               </div>
@@ -147,7 +150,7 @@ export default function SliderLanding() {
           <div
             className="slider-landing__bg"
             style={{
-              backgroundImage: "url(" + bgImg3 + ")",
+              backgroundImage: `url(${bgImg3})`,
               backgroundPositionX: "20%",
             }}>
             <div className="slider-landing_slide">
@@ -166,10 +169,10 @@ export default function SliderLanding() {
                 Студия «ТОП». Мы учим думать.
               </p>
               <div className="slider-landing_btn-group">
-              <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
+                <button className="slider-landing_btn" onClick={scrollToAboutUs}>Узнать больше</button>
                 <img
                   className="slider-landing_arrow"
-                  src="src/images/landing-btn-arrow.png"
+                  src={landingBtnArrow} 
                   alt="стрелка вправо"
                 />
               </div>

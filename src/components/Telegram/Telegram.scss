@@ -1,4 +1,5 @@
 @import '../../style/mixins.scss';
+@import "../../style/variables.scss";
 
 .telegram-container {
   box-sizing: border-box;
@@ -17,7 +18,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 10px;
-  background: url('src/images/stars.svg') no-repeat center center / cover, #282828;
+  background:  url($stars-image) no-repeat center center / cover, #282828;
   border-radius: 5px;
   @media (max-width: 570px) {
     flex-direction: column;
@@ -65,7 +66,7 @@
   }
 
   .text-2 {
-    @include goldText('../../images/gold.png');
+    @include goldText($gold-image);
     font-weight: bold;
     font-size: 2rem;
     line-height: 2.3rem;
@@ -92,7 +93,7 @@
   }
 
   span {
-    @include goldText('../../images/gold.png');
+    @include goldText($gold-image);
   }
 
   @media (max-width: 1024px) {
