@@ -2,6 +2,9 @@ import "./CoursePageEngChild.scss";
 import {Fragment} from "react";
 import CoursePageTitle from "../../CoursePageElements/CoursePageTitle/CoursePageTitle";
 import CoursePageRow from "../../CoursePageElements/CoursePageRow/CoursePageRow";
+import juniorImg from "../../../images/grade1to4.png";
+import teenImg from "../../../images/grade5to8.png";
+import superTeenImg from "../../../images/grade9to11.png";
 
 function JuniorRowAdditionalDesc() {
   return (
@@ -54,7 +57,7 @@ function SuperTeenRowMainDesc() {
         <li>- "подтянуть" английский;</li>
         <li>- развивать свой английский;</li>
         <li>- использовать английский не только на школьных уроках;</li>
-        <li>учиться за границей;</li>
+        <li>- учиться за границей;</li>
         <li>- успешно сдать ОГЭ по английскому;</li>
         <li>- успешно сдать ЕГЭ по английскому.</li>
       </ul>
@@ -85,7 +88,7 @@ const PAGE_DATA = {
     {
       rowTitle: "JUNIOR",
       rowId: "juniorEng",
-      rowImg: "src/images/grade1to4.png",
+      rowImg: juniorImg,
       rowImgAlt: "1-4 класс",
       rowMainDesc:
         "Курс «Junior»  имеет целью бесстрессовое знакомство детей с английским языком. Если ребёнок начал изучать язык до второго класса (обычно во втором классе начинается этот предмет в российских школах), шансы на успешное освоение школьной программы возрастают на 250-300 процентов. Это не мифы Древней Греции, это – проверенная опытом статистика.",
@@ -98,7 +101,7 @@ const PAGE_DATA = {
     {
       rowTitle: "TEEN",
       rowId: "teenEng",
-      rowImg: "src/images/grade5to8.png",
+      rowImg: teenImg,
       rowImgAlt: "5-8 класс",
       rowMainDesc:
         'Курс «Teen», разработанный для подростков 5-8 классов, одной из основных целей имеет оказание срочной грамматической "помощи" ребятам, имеющим пробелы и проблемы с английским в общеобразовательной школе.',
@@ -111,7 +114,7 @@ const PAGE_DATA = {
     {
       rowTitle: "SUPER TEEN",
       rowId: "superteenEng",
-      rowImg: "src/images/grade9to11.png",
+      rowImg: superTeenImg,
       rowImgAlt: "9-11 класс",
       rowMainDesc: <SuperTeenRowMainDesc></SuperTeenRowMainDesc>,
       rowAdditionalDesc: (

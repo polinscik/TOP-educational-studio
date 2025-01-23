@@ -4,7 +4,7 @@ import './OurContacts.scss';
 const OurContacts = () => {
     return (
         <div className="our-contacts">
-            <h2 className="our-contact-heading">Наши контакты</h2>
+            <h2 className="our-contact-heading" id="our-contact-title">Наши контакты</h2>
             <div className="contact-content">
                 <div className="map-container">
                     <iframe

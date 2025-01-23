@@ -87,7 +87,7 @@ export function About() {
       href: "/#about-title",
     },
     { name: "Преподаватели", href: "/#teachers-title" },
-    { name: "Контакты", href: "/" },
+    { name: "Контакты", href: "/#our-contact-title" },
   ];
 
   return (
