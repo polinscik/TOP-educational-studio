@@ -2,6 +2,9 @@ import "./CoursePageRuChild.scss";
 import {Fragment} from "react";
 import CoursePageTitle from "../../CoursePageElements/CoursePageTitle/CoursePageTitle";
 import CoursePageRow from "../../CoursePageElements/CoursePageRow/CoursePageRow";
+import juniorImg from "../../../images/grade1to4.png";
+import teenImg from "../../../images/grade5to8.png";
+import superTeenImg from "../../../images/grade9to11.png";
 
 function YouthRowMainDesc() {
   return (
@@ -84,7 +87,7 @@ const PAGE_DATA = {
     {
       rowTitle: "ЮНЫЙ РУСИЧ",
       rowId: "youngRussian",
-      rowImg: "src/images/grade1to4.png",
+      rowImg: juniorImg,
       rowImgAlt: "1-4 класс",
       rowMainDesc:
         "Курс «Юный русич» рассчитан на учеников 1-4 классов. В России русский – официальный язык, на нём говорят все жители нашей огромной страны. И как приятно, когда не просто говорят (открывают рот и производят звуки), а говорят грамотно!",
@@ -97,7 +100,7 @@ const PAGE_DATA = {
     {
       rowTitle: "МОЛОДОЙ РУСИЧ",
       rowId: "youthRussian",
-      rowImg: "src/images/grade5to8.png",
+      rowImg: teenImg,
       rowImgAlt: "5-8 класс",
       rowMainDesc: <YouthRowMainDesc></YouthRowMainDesc>,
       rowAdditionalDesc: <YouthRowAdditionalDesc></YouthRowAdditionalDesc>,
@@ -109,7 +112,7 @@ const PAGE_DATA = {
     {
       rowTitle: "КРУТОЙ РУСИЧ",
       rowId: "coolRussian",
-      rowImg: "src/images/grade9to11.png",
+      rowImg: superTeenImg,
       rowImgAlt: "9-11 класс",
       rowMainDesc:
         "Курс «Крутой русич» рассчитан на учеников 9-11 классов. Кому-то нравится такая идея, кому-то - нет, но русский язык был, есть и будет обязательным предметом на государственных экзаменах. Чем раньше ты согласишься с этой мыслью и полюбишь русский, тем больше шансов будет у тебя на успешную сдачу экзаменационных испытаний любого уровня!",
